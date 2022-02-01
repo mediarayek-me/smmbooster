@@ -1,0 +1,26 @@
+
+/**
+  RTL custom style
+*/
+
+
+@font-face {
+  font-family: 'Cairo';
+  src: url('../../public/fonts/Cairo-Regular.ttf');
+}
+html,body{
+  font-family: 'Cairo', sans-serif !important;
+}
+form .form-control,input,select,.invalid-feedback,a
+{
+    direction: rtl !important;
+    text-align: right !important;
+}
+.block-options{
+  padding: 0 !important;
+}
+.smini-hidden{
+  .img-avatar-thumb{
+    margin-left: 30px;
+  }
+}

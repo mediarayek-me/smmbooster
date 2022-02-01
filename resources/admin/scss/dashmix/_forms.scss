@@ -1,0 +1,41 @@
+//
+// Forms
+// --------------------------------------------------
+
+.form-control {
+    font-family: $font-family-base;
+
+    // Alternative Style
+    &.form-control-alt {
+        border-color: $body-bg;
+        background-color: $body-bg;
+        transition: none;
+
+        &:focus {
+            border-color: $body-bg-dark;
+            background-color: $body-bg-dark;
+            box-shadow: none;
+        }
+
+        &.is-valid {
+            border-color: lighten(theme-color("success-light"), 15%);
+            background-color: lighten(theme-color("success-light"), 15%);
+
+            &:focus {
+                border-color: lighten(theme-color("success-light"), 10%);
+                background-color: lighten(theme-color("success-light"), 10%);
+            }
+        }
+
+        &.is-invalid {
+            border-color: lighten(theme-color("danger-light"), 23%);
+            background-color: lighten(theme-color("danger-light"), 23%);
+
+
+            &:focus {
+                border-color: lighten(theme-color("danger-light"), 20%);
+                background-color: lighten(theme-color("danger-light"), 20%);
+            }
+        }
+    }
+}

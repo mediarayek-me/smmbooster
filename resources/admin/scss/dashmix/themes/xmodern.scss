@@ -1,0 +1,42 @@
+//
+// xModern Theme
+// --------------------------------------------------
+
+// Include base files
+@import 'base';
+
+// Generate color theme
+@include color-theme($theme-xmodern-primary,
+                     $theme-xmodern-light,
+                     $theme-xmodern-lighter,
+                     $theme-xmodern-dark,
+                     $theme-xmodern-darker,
+                     $theme-xmodern-body-bg,
+                     $theme-xmodern-body-bg-dark,
+                     $theme-xmodern-body-bg-light,
+                     $theme-xmodern-body-color,
+                     $theme-xmodern-body-color-dark,
+                     $theme-xmodern-body-color-light,
+                     $theme-xmodern-link-color,
+                     $theme-xmodern-link-hover-color,
+                     $theme-xmodern-headings-color,
+                     $theme-xmodern-input-btn-focus-color,
+                     $theme-xmodern-input-btn-focus-box-shadow,
+                     $theme-xmodern-input-bg,
+                     $theme-xmodern-input-color,
+                     $theme-xmodern-input-border-color,
+                     $theme-xmodern-input-focus-bg,
+                     $theme-xmodern-input-focus-color,
+                     $theme-xmodern-input-focus-border-color,
+                     $theme-xmodern-header-bg,
+                     $theme-xmodern-header-dark-bg,
+                     $theme-xmodern-sidebar-bg,
+                     $theme-xmodern-sidebar-dark-bg,
+                     $theme-xmodern-side-overlay-bg,
+                     $theme-xmodern-main-nav-link-icon-color,
+                     $theme-xmodern-main-nav-link-hover-bg,
+                     $theme-xmodern-main-nav-submenu-bg,
+                     $theme-xmodern-main-nav-link-icon-dark-color,
+                     $theme-xmodern-main-nav-link-dark-hover-bg,
+                     $theme-xmodern-main-nav-submenu-dark-bg,
+                     $theme-xmodern-btn-alt-primary-bg);

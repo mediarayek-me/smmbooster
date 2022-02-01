@@ -1,0 +1,400 @@
+//
+// Main Navigation
+// --------------------------------------------------
+
+.nav-main {
+    @include list-unstyled;
+}
+
+// Headings
+.nav-main-heading {
+    padding-top: 1.75rem;
+    padding-bottom: .25rem;
+    padding-left: .625rem;
+    font-size: .8125rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .075rem;
+    color: lighten($body-color, 30%);
+}
+
+// Nav li items
+.nav-main-item {
+    // Fixing flexbox IE10-11 bug, so we can use min-height in links and align their content vertically
+    display: flex;
+    flex-direction: column;
+}
+
+// Default links
+.nav-main-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: .5rem .625rem;
+    margin: 2px 0;
+    min-height: 2.25rem;
+    font-size: $font-size-sm;
+    font-weight: 500;
+    line-height: 1.25rem;
+    letter-spacing: .0125em;
+    color: lighten($body-color, 5%);
+    border-radius: $border-radius-sm;
+
+    .nav-main-link-icon {
+        flex: 0 0 auto;
+        display: inline-block;
+        margin-right: .625rem;
+        min-width: 1.25rem;
+        font-size: 1rem;
+        text-align: center;
+        color: $main-nav-link-icon-color;
+    }
+
+    .nav-main-link-name {
+        flex: 1 1 auto;
+        display: inline-block;
+        max-width: 100%;
+    }
+
+    .nav-main-link-badge {
+        flex: 0 0 auto;
+        display: inline-block;
+        margin-left: .625rem;
+        padding-right: .375rem;
+        padding-left: .375rem;
+        font-size: .75rem;
+    }
+
+    &:hover,
+    &.active {
+        color: $black;
+        background-color: $main-nav-link-hover-bg;
+    }
+
+    &.nav-main-link-submenu {
+        padding-right: 2rem;
+
+        &::before,
+        &::after {
+            position: absolute;
+            top: 50%;
+            right: .625rem;
+            display: block;
+            margin-top: -.5rem;
+            width: 1rem;
+            height: 1rem;
+            line-height: 1rem;
+            text-align: center;
+            font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Pro';
+            font-weight: 900;
+            transition: opacity $main-nav-transition, transform $main-nav-transition;
+        }
+
+        &::before {
+            content: '\f107';
+            opacity: .4;
+        }
+
+        &::after {
+            content: '\f106';
+            opacity: 0;
+            transform: translateY(-.625rem);
+        }
+    }
+}
+
+// Sub menus
+.nav-main-submenu {
+    padding-left: 2.5rem;
+    list-style: none;
+    height: 0;
+    overflow: hidden;
+    background-color: $main-nav-submenu-bg;
+    @include border-bottom-radius($border-radius-sm);
+
+    .nav-main-item {
+        opacity: 0;
+        transition: opacity $main-nav-transition, transform $main-nav-transition;
+        transform: translateX(1rem);
+    }
+
+    .nav-main-heading {
+        padding-top: 1.25rem;
+        padding-bottom: .25rem;
+    }
+
+    .nav-main-link {
+        margin: 0;
+        padding-top: .375rem;
+        padding-bottom: .375rem;
+        padding-left: 0;
+        font-size: .8125rem;
+        min-height: 2rem;
+        color: lighten($body-color, 20%);
+
+        &:hover,
+        &.active {
+            color: darken($body-color, 7.5%);
+            background-color: transparent;
+        }
+    }
+
+    .nav-main-submenu {
+        padding-left: .75rem;
+    }
+}
+
+// Active sub menu
+.nav-main-item.open {
+    > .nav-main-link-submenu {
+        color: $black;
+        background-color: $main-nav-link-hover-bg;
+        @include border-bottom-radius(0);
+
+        &::before {
+            opacity: 0;
+            transform: translateY(.625rem);
+        }
+
+        &::after {
+            opacity: .6;
+            transform: translateY(0);
+        }
+    }
+
+    > .nav-main-submenu {
+        height: auto;
+        margin-top: -2px;
+        padding-top: .375rem;
+        padding-bottom: .375rem;
+
+        > .nav-main-item {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}
+
+.nav-main-submenu .nav-main-item.open .nav-main-link {
+    background-color: transparent;
+}
+
+// Nav Main Horizontal
+@include media-breakpoint-up(lg) {
+    .nav-main-horizontal {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+
+        // Headings
+        .nav-main-heading {
+            display: none;
+        }
+
+        // Nav li items
+        > .nav-main-item {
+            position: relative;
+            display: inline-block;
+
+            &:not(:last-child) {
+                margin-right: .25rem;
+            }
+        }
+
+        // Sub menus
+        .nav-main-submenu {
+            position: absolute;
+            left: 0;
+            width: 220px;
+            padding-left: 0;
+            z-index: $zindex-dropdown - 5;
+            box-shadow: 0 .25rem 2rem rgba(0,0,0,.08);
+
+            &.nav-main-submenu-right {
+                left: auto;
+                right: 0;
+            }
+
+            .nav-main-link {
+                &.nav-main-link-submenu {
+                    &::before {
+                        content: '\f105';
+                    }
+
+                    &::after {
+                        content: '\f104';
+                    }
+                }
+            }
+
+            .nav-main-item {
+                transform: translateY(-.5rem);
+            }
+
+            .nav-main-link {
+                padding-left: 1rem;
+            }
+        }
+
+        // Active sub menu
+        .nav-main-item.open {
+            > .nav-main-submenu {
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+                overflow: visible;
+
+                > .nav-main-item {
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        // Sub menus - 2++ Level
+        .nav-main-submenu .nav-main-submenu {
+            top: -.5rem;
+            left: auto;
+            right: -100%;
+            margin-top: 0;
+        }
+
+        // Menu variations
+        &.nav-main-horizontal-center {
+            justify-content: center;
+        }
+
+        &.nav-main-horizontal-justify {
+            > .nav-main-item {
+                flex: 1 1 auto;
+            }
+        }
+
+        &.nav-main-hover {
+            .nav-main-item:hover {
+                > .nav-main-link-submenu {
+                    color: $black;
+                    background-color: $main-nav-link-hover-bg;
+                    @include border-bottom-radius(0);
+
+                    &::before {
+                        opacity: 0;
+                        transform: translateY(.625rem);
+                    }
+
+                    &::after {
+                        opacity: .6;
+                        transform: translateY(0);
+                    }
+                }
+
+                > .nav-main-submenu {
+                    height: auto;
+                    margin-top: -2px;
+                    padding-top: .5rem;
+                    padding-bottom: .5rem;
+                    overflow: visible;
+
+                    .nav-main-submenu {
+                        margin-top: 0;
+                    }
+
+                    > .nav-main-item {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Dark Variation
+.nav-main-dark,
+.sidebar-dark #sidebar,
+.page-header-dark #page-header {
+    // Headings
+    .nav-main-heading {
+        color: lighten($sidebar-dark-bg, 30%);
+    }
+
+    // Default links
+    .nav-main-link {
+        font-weight: 400;
+        color: lighten($sidebar-dark-bg, 55%);
+
+        > .nav-main-link-icon {
+            color: $main-nav-link-icon-dark-color;
+        }
+
+        &:hover,
+        &.active {
+            color: $white;
+            background-color: $main-nav-link-dark-hover-bg;
+        }
+    }
+
+    // Sub menus
+    .nav-main-submenu {
+        background-color: $main-nav-submenu-dark-bg;
+
+        .nav-main-link {
+            color: lighten($sidebar-dark-bg, 45%);        
+
+            &:hover,
+            &.active {
+                color: $white;
+                background-color: transparent;
+            }
+        }
+    }
+
+    // Active sub menu
+    .nav-main-item.open {
+        > .nav-main-link-submenu {
+            color: $white;
+            background-color: $main-nav-link-dark-hover-bg;
+        }
+
+        > .nav-main-submenu {
+            background-color: $main-nav-submenu-dark-bg;
+        }
+    }
+
+    .nav-main-submenu .nav-main-item.open .nav-main-link {
+        background-color: transparent;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .nav-main-dark.nav-main-horizontal.nav-main-hover,
+    .sidebar-dark #sidebar .nav-main-horizontal.nav-main-hover,
+    .page-header-dark #page-header .nav-main-horizontal.nav-main-hover {
+        .nav-main-link {
+            color: rgba($white, .75);
+
+            > .nav-main-link-icon {
+                color: rgba($white, .4);
+            }
+
+            &:hover,
+            &.active {
+                color: $white;
+                background-color: darken($header-dark-bg, 5%);
+            }
+        }
+
+        .nav-main-item:hover {
+            > .nav-main-link-submenu {
+                color: $white;
+                background-color: darken($header-dark-bg, 5%);
+            }
+
+            > .nav-main-submenu {
+                background-color: darken($header-dark-bg, 5%);
+            }
+        }
+
+        .nav-main-submenu .nav-main-item:hover .nav-main-link {
+            background-color: transparent;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+//
+// Custom Main
+//
+// Add your own styles or override existing ones
+//
+// This file is included last, so you have access
+// to all Bootstrap and Dashmix functions/mixins/styles etc
+// --------------------------------------------------
+
+// If you have many custom styles, you can create and import additional files
+// For example you can create _component1.scss and include it as follows:
+// @import 'component1';
+
+#page-header{
+     background-color: var(--primary) !important;
+}
+.block-header-default{
+    background-color: #f8f9fc;
+}
+#main-container{
+    margin: 100px 10px !important;
+}
+label {
+    font-weight: 100;
+    font-size: 14px;
+}
+form .form-control{
+    font-size: 12px !important;
+}
+
+.spinner{
+    position: absolute;
+    right: 0;
+    top: 40px;
+    left: 0;
+    margin: auto;
+}
+
+tbody{
+    height: 120px;
+    position: relative;
+}
+
+.bg-primary {
+    background-color: var(--secondary) !important;
+}
+
+.select2-container{
+    width: 100% !important;
+    display: block !important;
+    border: 1px solid #cbcbcb;
+    border-radius: 8px;;
+}
+
+
+#page-footer{
+    margin-top:80px
+}
+.header-area
+  .dropdown{
+   cursor: pointer;
+      i{
+        font-size: 10px;
+      }
+  }
+ .dropdown-toggle::after{
+  display: none;
+}

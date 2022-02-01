@@ -1,0 +1,218 @@
+//
+// Background
+// --------------------------------------------------
+
+// Black/White with opacity
+.bg-black {
+    &-5 { background-color: rgba(0,0,0,.05) !important; }
+    &-10 { background-color: rgba(0,0,0,.1) !important; }
+    &-25 { background-color: rgba(0,0,0,.25) !important; }
+    &-50 { background-color: rgba(0,0,0,.5) !important; }
+    &-75 { background-color: rgba(0,0,0,.75) !important; }
+    &-90 { background-color: rgba(0,0,0,.9) !important; }
+    &-95 { background-color: rgba(0,0,0,.95) !important; }
+}
+
+.bg-white {
+    &-5 { background-color: rgba(255,255,255,.05) !important; }
+    &-10 { background-color: rgba(255,255,255,.1) !important; }
+    &-25 { background-color: rgba(255,255,255,.25) !important; }
+    &-50 { background-color: rgba(255,255,255,.5) !important; }
+    &-75 { background-color: rgba(255,255,255,.75) !important; }
+    &-90 { background-color: rgba(255,255,255,.9) !important; }
+    &-95 { background-color: rgba(255,255,255,.95) !important; }
+}
+
+// Image Background
+.bg-image {
+    background-position: 0% 50%;
+    background-size: cover;
+
+    &-top { background-position-y: 0%; }
+    &-bottom { background-position-y: 100%; }
+
+    @include media-breakpoint-up(xl) {
+        &-fixed { background-attachment: fixed; }
+    }
+}
+
+// Pattern Image
+.bg-pattern {
+    background-repeat: repeat;
+}
+
+// Video Background
+.bg-video {
+    width: 100%;
+    transform: translateZ(0);
+}
+
+// Contextual colors
+@include bg-variant('.bg-primary-op', rgba(theme-color("primary"), .75));
+@include bg-variant('.bg-primary-dark', theme-color("primary-dark"));
+@include bg-variant('.bg-primary-dark-op', rgba(theme-color("primary-dark"), .8));
+@include bg-variant('.bg-primary-darker', theme-color("primary-darker"));
+@include bg-variant('.bg-primary-light', theme-color("primary-light"));
+@include bg-variant('.bg-primary-lighter', theme-color("primary-lighter"));
+
+@include bg-variant('.bg-success-light', theme-color("success-light"));
+@include bg-variant('.bg-warning-light', theme-color("warning-light"));
+@include bg-variant('.bg-info-light', theme-color("info-light"));
+@include bg-variant('.bg-danger-light', theme-color("danger-light"));
+
+@include bg-variant('.bg-success-lighter', lighten(theme-color("success-light"), 15%));
+@include bg-variant('.bg-warning-lighter', lighten(theme-color("warning-light"), 15%));
+@include bg-variant('.bg-info-lighter', lighten(theme-color("info-light"), 15%));
+@include bg-variant('.bg-danger-lighter', lighten(theme-color("danger-light"), 15%));
+
+@include bg-variant('.bg-success-op', rgba(theme-color("success-light"), .95));
+@include bg-variant('.bg-warning-op', rgba(theme-color("warning-light"), .95));
+@include bg-variant('.bg-info-op', rgba(theme-color("info-light"), .95));
+@include bg-variant('.bg-danger-op ', rgba(theme-color("danger-light"), .95));
+
+@include bg-variant('.bg-body', $body-bg);
+@include bg-variant('.bg-body-light', $body-bg-light);
+@include bg-variant('.bg-body-dark', $body-bg-dark);
+@include bg-variant('.bg-muted', gray("600"));
+
+@include bg-variant('.bg-white', $white);
+@include bg-variant('.bg-black', $black);
+
+@include bg-variant('.bg-gray', gray("400"));
+@include bg-variant('.bg-gray-dark', gray("600"));
+@include bg-variant('.bg-gray-darker', gray("800"));
+@include bg-variant('.bg-gray-light', gray("200"));
+@include bg-variant('.bg-gray-lighter', gray("100"));
+
+// Elements
+@include bg-variant('.bg-header-light', $header-bg);
+@include bg-variant('.bg-header-dark', $header-dark-bg);
+
+@include bg-variant('.bg-sidebar-light', $sidebar-bg);
+@include bg-variant('.bg-sidebar-dark', $sidebar-dark-bg);
+
+// Gradients
+@include bg-gradient-variant-linear('.bg-gd-primary', 135deg, theme-color("primary"), lighten(theme-color("primary"), 15%));
+
+@include bg-gradient-variant-linear('.bg-gd-dusk', 135deg, #d262e3, theme-color('primary'));
+@include bg-gradient-variant-linear('.bg-gd-fruit', 135deg, #89216b, #da4453);
+@include bg-gradient-variant-linear('.bg-gd-aqua', 135deg, #02aab0, #00cdac);
+@include bg-gradient-variant-linear('.bg-gd-sublime', 135deg, #6a82fb, #fc5c7d);
+@include bg-gradient-variant-linear('.bg-gd-sea', 135deg, #2b32b2, #1488cc);
+@include bg-gradient-variant-linear('.bg-gd-leaf', 135deg, theme-color('warning'), theme-color('success'));
+@include bg-gradient-variant-linear('.bg-gd-lake', 135deg, #00f260, #0575e6);
+@include bg-gradient-variant-linear('.bg-gd-sun', 135deg, #e65c00, #f9d423);
+
+@include bg-gradient-variant-linear('.bg-gd-dusk-op', 135deg, rgba(#d262e3, .5), rgba(theme-color('primary'), .5));
+@include bg-gradient-variant-linear('.bg-gd-fruit-op', 135deg, rgba(#89216b, .5), rgba(#da4453, .5));
+@include bg-gradient-variant-linear('.bg-gd-aqua-op', 135deg, rgba(#02aab0, .5), rgba(#00cdac, .5));
+@include bg-gradient-variant-linear('.bg-gd-sublime-op', 135deg, rgba(#6a82fb, .5), rgba(#fc5c7d, .5));
+@include bg-gradient-variant-linear('.bg-gd-sea-op', 135deg, rgba(#2b32b2, .5), rgba(#1488cc, .5));
+@include bg-gradient-variant-linear('.bg-gd-leaf-op', 135deg, rgba(theme-color('warning'), .5), rgba(theme-color('success'), .5));
+@include bg-gradient-variant-linear('.bg-gd-lake-op', 135deg, rgba(#00f260, .5), rgba(#0575e6, .5));
+@include bg-gradient-variant-linear('.bg-gd-sun-op', 135deg, rgba(#e65c00, .5), rgba(#f9d423, .5));
+
+.bg-gd-white-op-r,
+.bg-gd-white-op-l,
+.bg-gd-white-op-rl {
+    background: rgba(#ffffff, .98);
+}
+
+@include media-breakpoint-up(md) {
+    @include bg-gradient-variant-linear('.bg-gd-white-op-r', 90deg, rgba(#ffffff, .3) 0%, rgba(#ffffff, .98) 50%);
+    @include bg-gradient-variant-linear('.bg-gd-white-op-l', -90deg, rgba(#ffffff, .3) 0%, rgba(#ffffff, .98) 50%);
+
+    .bg-gd-white-op-rl {
+        background: linear-gradient(90deg, rgba(#ffffff, .75) 0%, rgba(#ffffff, .97) 30%, rgba(#ffffff, .97) 70%, rgba(#ffffff, .75) 100%);
+    }
+}
+
+// Default Color Theme
+@include bg-variant('.bg-default', theme-color("primary"));
+@include bg-variant('.bg-default-op', rgba(theme-color("primary"), .75));
+@include bg-variant('.bg-default-dark', theme-color("primary-dark"));
+@include bg-variant('.bg-default-dark-op', rgba(theme-color("primary-dark"), .8));
+@include bg-variant('.bg-default-darker', theme-color("primary-darker"));
+@include bg-variant('.bg-default-light', theme-color("primary-light"));
+@include bg-variant('.bg-default-lighter', theme-color("primary-lighter"));
+@include bg-gradient-variant-linear('.bg-gd-default', 135deg, theme-color("primary"), lighten(theme-color("primary"), 15%));
+
+// xWork Color Theme
+@include bg-variant('.bg-xwork', $theme-xwork-primary);
+@include bg-variant('.bg-xwork-op', rgba($theme-xwork-primary, .75));
+@include bg-variant('.bg-xwork-dark', $theme-xwork-dark);
+@include bg-variant('.bg-xwork-dark-op', rgba($theme-xwork-dark, .8));
+@include bg-variant('.bg-xwork-darker', $theme-xwork-darker);
+@include bg-variant('.bg-xwork-light', $theme-xwork-light);
+@include bg-variant('.bg-xwork-lighter', $theme-xwork-lighter);
+@include bg-gradient-variant-linear('.bg-gd-xwork', 135deg, $theme-xwork-primary, lighten($theme-xwork-primary, 15%));
+
+// xModern Color Theme
+@include bg-variant('.bg-xmodern', $theme-xmodern-primary);
+@include bg-variant('.bg-xmodern-op', rgba($theme-xmodern-primary, .75));
+@include bg-variant('.bg-xmodern-dark', $theme-xmodern-dark);
+@include bg-variant('.bg-xmodern-dark-op', rgba($theme-xmodern-dark, .8));
+@include bg-variant('.bg-xmodern-darker', $theme-xmodern-darker);
+@include bg-variant('.bg-xmodern-light', $theme-xmodern-light);
+@include bg-variant('.bg-xmodern-lighter', $theme-xmodern-lighter);
+@include bg-gradient-variant-linear('.bg-gd-xmodern', 135deg, $theme-xmodern-primary, lighten($theme-xmodern-primary, 15%));
+
+// xEco Color Theme
+@include bg-variant('.bg-xeco', $theme-xeco-primary);
+@include bg-variant('.bg-xeco-op', rgba($theme-xeco-primary, .75));
+@include bg-variant('.bg-xeco-dark', $theme-xeco-dark);
+@include bg-variant('.bg-xeco-dark-op', rgba($theme-xeco-dark, .8));
+@include bg-variant('.bg-xeco-darker', $theme-xeco-darker);
+@include bg-variant('.bg-xeco-light', $theme-xeco-light);
+@include bg-variant('.bg-xeco-lighter', $theme-xeco-lighter);
+@include bg-gradient-variant-linear('.bg-gd-xeco', 135deg, $theme-xeco-primary, lighten($theme-xeco-primary, 15%));
+
+// xSmooth Color Theme
+@include bg-variant('.bg-xsmooth', $theme-xsmooth-primary);
+@include bg-variant('.bg-xsmooth-op', rgba($theme-xsmooth-primary, .75));
+@include bg-variant('.bg-xsmooth-dark', $theme-xsmooth-dark);
+@include bg-variant('.bg-xsmooth-dark-op', rgba($theme-xsmooth-dark, .8));
+@include bg-variant('.bg-xsmooth-darker', $theme-xsmooth-darker);
+@include bg-variant('.bg-xsmooth-light', $theme-xsmooth-light);
+@include bg-variant('.bg-xsmooth-lighter', $theme-xsmooth-lighter);
+@include bg-gradient-variant-linear('.bg-gd-xsmooth', 135deg, $theme-xsmooth-primary, lighten($theme-xsmooth-primary, 15%));
+
+// xInspire Color Theme
+@include bg-variant('.bg-xinspire', $theme-xinspire-primary);
+@include bg-variant('.bg-xinspire-op', rgba($theme-xinspire-primary, .75));
+@include bg-variant('.bg-xinspire-dark', $theme-xinspire-dark);
+@include bg-variant('.bg-xinspire-dark-op', rgba($theme-xinspire-dark, .8));
+@include bg-variant('.bg-xinspire-darker', $theme-xinspire-darker);
+@include bg-variant('.bg-xinspire-light', $theme-xinspire-light);
+@include bg-variant('.bg-xinspire-lighter', $theme-xinspire-lighter);
+@include bg-gradient-variant-linear('.bg-gd-xinspire', 135deg, $theme-xinspire-primary, lighten($theme-xinspire-primary, 15%));
+
+// xDream Color Theme
+@include bg-variant('.bg-xdream', $theme-xdream-primary);
+@include bg-variant('.bg-xdream-op', rgba($theme-xdream-primary, .75));
+@include bg-variant('.bg-xdream-dark', $theme-xdream-dark);
+@include bg-variant('.bg-xdream-dark-op', rgba($theme-xdream-dark, .8));
+@include bg-variant('.bg-xdream-darker', $theme-xdream-darker);
+@include bg-variant('.bg-xdream-light', $theme-xdream-light);
+@include bg-variant('.bg-xdream-lighter', $theme-xdream-lighter);
+@include bg-gradient-variant-linear('.bg-gd-xdream', 135deg, $theme-xdream-primary, lighten($theme-xdream-primary, 15%));
+
+// xPro Color Theme
+@include bg-variant('.bg-xpro', $theme-xpro-primary);
+@include bg-variant('.bg-xpro-op', rgba($theme-xpro-primary, .75));
+@include bg-variant('.bg-xpro-dark', $theme-xpro-dark);
+@include bg-variant('.bg-xpro-dark-op', rgba($theme-xpro-dark, .8));
+@include bg-variant('.bg-xpro-darker', $theme-xpro-darker);
+@include bg-variant('.bg-xpro-light', $theme-xpro-light);
+@include bg-variant('.bg-xpro-lighter', $theme-xpro-lighter);
+@include bg-gradient-variant-linear('.bg-gd-xpro', 135deg, $theme-xpro-primary, lighten($theme-xpro-primary, 15%));
+
+// xPlay Color Theme
+@include bg-variant('.bg-xplay', $theme-xplay-primary);
+@include bg-variant('.bg-xplay-op', rgba($theme-xplay-primary, .75));
+@include bg-variant('.bg-xplay-dark', $theme-xplay-dark);
+@include bg-variant('.bg-xplay-dark-op', rgba($theme-xplay-dark, .8));
+@include bg-variant('.bg-xplay-darker', $theme-xplay-darker);
+@include bg-variant('.bg-xplay-light', $theme-xplay-light);
+@include bg-variant('.bg-xplay-lighter', $theme-xplay-lighter);
+@include bg-gradient-variant-linear('.bg-gd-xplay', 135deg, $theme-xplay-primary, lighten($theme-xplay-primary, 15%));

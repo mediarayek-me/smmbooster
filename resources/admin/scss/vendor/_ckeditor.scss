@@ -1,0 +1,26 @@
+//
+// Ckeditor Editor
+//
+// Overwrite/Extend styles
+// --------------------------------------------------
+
+.cke_chrome,
+.ck.ck-editor__main > .ck-editor__editable:not(.ck-focused),
+.ck.ck-toolbar {
+    border-color: $body-bg-dark !important;
+}
+
+.cke_top,
+.ck.ck-toolbar {
+    border-bottom-color: $body-bg-dark !important;
+    background: $body-bg-light !important;
+}
+
+.ck.ck-toolbar .ck.ck-toolbar__separator {
+    background: $body-bg-dark !important;
+}
+
+.cke_bottom {
+    border-top-color: $body-bg-dark !important;
+    background: $body-bg-light !important;
+}

@@ -1,0 +1,42 @@
+//
+// xPlay Theme
+// --------------------------------------------------
+
+// Include base files
+@import 'base';
+
+// Generate color theme
+@include color-theme($theme-xplay-primary,
+                     $theme-xplay-light,
+                     $theme-xplay-lighter,
+                     $theme-xplay-dark,
+                     $theme-xplay-darker,
+                     $theme-xplay-body-bg,
+                     $theme-xplay-body-bg-dark,
+                     $theme-xplay-body-bg-light,
+                     $theme-xplay-body-color,
+                     $theme-xplay-body-color-dark,
+                     $theme-xplay-body-color-light,
+                     $theme-xplay-link-color,
+                     $theme-xplay-link-hover-color,
+                     $theme-xplay-headings-color,
+                     $theme-xplay-input-btn-focus-color,
+                     $theme-xplay-input-btn-focus-box-shadow,
+                     $theme-xplay-input-bg,
+                     $theme-xplay-input-color,
+                     $theme-xplay-input-border-color,
+                     $theme-xplay-input-focus-bg,
+                     $theme-xplay-input-focus-color,
+                     $theme-xplay-input-focus-border-color,
+                     $theme-xplay-header-bg,
+                     $theme-xplay-header-dark-bg,
+                     $theme-xplay-sidebar-bg,
+                     $theme-xplay-sidebar-dark-bg,
+                     $theme-xplay-side-overlay-bg,
+                     $theme-xplay-main-nav-link-icon-color,
+                     $theme-xplay-main-nav-link-hover-bg,
+                     $theme-xplay-main-nav-submenu-bg,
+                     $theme-xplay-main-nav-link-icon-dark-color,
+                     $theme-xplay-main-nav-link-dark-hover-bg,
+                     $theme-xplay-main-nav-submenu-dark-bg,
+                     $theme-xplay-btn-alt-primary-bg);

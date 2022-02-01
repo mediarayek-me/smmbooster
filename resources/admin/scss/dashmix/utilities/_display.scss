@@ -1,0 +1,35 @@
+//
+// Display
+// --------------------------------------------------
+
+.overflow-y-auto {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.opacity-0 { opacity: 0; }
+.opacity-25 { opacity: .25; }
+.opacity-50 { opacity: .50; }
+.opacity-75 { opacity: .75; }
+.opacity-1 { opacity: 1; }
+
+// Full height with scroll on large screens
+@include media-breakpoint-up(lg) {
+    .h100-scroll {
+        height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+// Aspect Ratios
+.aspect-ratio-1-1 {
+    @include aspect-ratio(1, 1);
+}
+
+.aspect-ratio-4-3 {
+    @include aspect-ratio(4, 3);
+}
+
+.aspect-ratio-16-9 {
+    @include aspect-ratio(16, 9);
+}

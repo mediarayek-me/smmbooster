@@ -1,0 +1,35 @@
+//
+// Nestable2
+//
+// Overwrite/Extend styles
+// --------------------------------------------------
+
+.dd,
+.dd-item,
+.dd-empty,
+.dd-placeholder {
+    font-size: .875rem;
+}
+
+.dd-handle {
+    height: 2.25rem;
+    padding: .5rem .75rem;
+    color: $body-color;
+    background: $body-bg-light;
+    border-color: $body-bg-dark;
+
+    &:hover {
+        color: $body-color-dark;
+    }
+}
+
+.dd-item > button {
+    height: 1.625rem;
+}
+
+.dd-empty,
+.dd-placeholder {
+    border-color: theme-color('primary-darker');
+    background: theme-color('primary-lighter');
+    opacity: .25;
+}

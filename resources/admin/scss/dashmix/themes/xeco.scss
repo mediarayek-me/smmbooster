@@ -1,0 +1,42 @@
+//
+// xEco Theme
+// --------------------------------------------------
+
+// Include base files
+@import 'base';
+
+// Generate color theme
+@include color-theme($theme-xeco-primary,
+                     $theme-xeco-light,
+                     $theme-xeco-lighter,
+                     $theme-xeco-dark,
+                     $theme-xeco-darker,
+                     $theme-xeco-body-bg,
+                     $theme-xeco-body-bg-dark,
+                     $theme-xeco-body-bg-light,
+                     $theme-xeco-body-color,
+                     $theme-xeco-body-color-dark,
+                     $theme-xeco-body-color-light,
+                     $theme-xeco-link-color,
+                     $theme-xeco-link-hover-color,
+                     $theme-xeco-headings-color,
+                     $theme-xeco-input-btn-focus-color,
+                     $theme-xeco-input-btn-focus-box-shadow,
+                     $theme-xeco-input-bg,
+                     $theme-xeco-input-color,
+                     $theme-xeco-input-border-color,
+                     $theme-xeco-input-focus-bg,
+                     $theme-xeco-input-focus-color,
+                     $theme-xeco-input-focus-border-color,
+                     $theme-xeco-header-bg,
+                     $theme-xeco-header-dark-bg,
+                     $theme-xeco-sidebar-bg,
+                     $theme-xeco-sidebar-dark-bg,
+                     $theme-xeco-side-overlay-bg,
+                     $theme-xeco-main-nav-link-icon-color,
+                     $theme-xeco-main-nav-link-hover-bg,
+                     $theme-xeco-main-nav-submenu-bg,
+                     $theme-xeco-main-nav-link-icon-dark-color,
+                     $theme-xeco-main-nav-link-dark-hover-bg,
+                     $theme-xeco-main-nav-submenu-dark-bg,
+                     $theme-xeco-btn-alt-primary-bg);

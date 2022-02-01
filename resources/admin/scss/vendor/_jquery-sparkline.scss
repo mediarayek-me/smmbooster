@@ -1,0 +1,13 @@
+//
+// jQuery Sparkline
+//
+// Overwrite/Extend styles
+// --------------------------------------------------
+
+.jqstooltip {
+    box-sizing: content-box;
+    font-family: $font-family-base;
+    border: none !important;
+    background-color: rgba(0,0,0,.75) !important;
+    border-radius: $border-radius-sm;
+}

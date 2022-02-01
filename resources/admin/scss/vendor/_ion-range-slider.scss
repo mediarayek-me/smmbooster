@@ -1,0 +1,36 @@
+//
+// Ion Range Slider
+//
+// Overwrite/Extend styles
+// --------------------------------------------------
+
+.irs.irs--round {
+    .irs-line,
+    .irs-bar {
+        height: 5px;
+    }
+
+    .irs-min,
+    .irs-max,
+    .irs-line,
+    .irs-grid-pol {
+        background: $body-bg;
+    }
+
+    .irs-handle {
+        border-color: theme-color("primary");
+    }
+
+    .irs-from:before,
+    .irs-to:before,
+    .irs-single:before {
+        border-top-color: theme-color("primary");
+    }
+
+    .irs-bar,
+    .irs-from,
+    .irs-to,
+    .irs-single {
+        background: theme-color("primary");
+    }
+}

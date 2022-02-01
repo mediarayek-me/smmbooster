@@ -1,0 +1,42 @@
+//
+// xSmooth Theme
+// --------------------------------------------------
+
+// Include base files
+@import 'base';
+
+// Generate color theme
+@include color-theme($theme-xsmooth-primary,
+                     $theme-xsmooth-light,
+                     $theme-xsmooth-lighter,
+                     $theme-xsmooth-dark,
+                     $theme-xsmooth-darker,
+                     $theme-xsmooth-body-bg,
+                     $theme-xsmooth-body-bg-dark,
+                     $theme-xsmooth-body-bg-light,
+                     $theme-xsmooth-body-color,
+                     $theme-xsmooth-body-color-dark,
+                     $theme-xsmooth-body-color-light,
+                     $theme-xsmooth-link-color,
+                     $theme-xsmooth-link-hover-color,
+                     $theme-xsmooth-headings-color,
+                     $theme-xsmooth-input-btn-focus-color,
+                     $theme-xsmooth-input-btn-focus-box-shadow,
+                     $theme-xsmooth-input-bg,
+                     $theme-xsmooth-input-color,
+                     $theme-xsmooth-input-border-color,
+                     $theme-xsmooth-input-focus-bg,
+                     $theme-xsmooth-input-focus-color,
+                     $theme-xsmooth-input-focus-border-color,
+                     $theme-xsmooth-header-bg,
+                     $theme-xsmooth-header-dark-bg,
+                     $theme-xsmooth-sidebar-bg,
+                     $theme-xsmooth-sidebar-dark-bg,
+                     $theme-xsmooth-side-overlay-bg,
+                     $theme-xsmooth-main-nav-link-icon-color,
+                     $theme-xsmooth-main-nav-link-hover-bg,
+                     $theme-xsmooth-main-nav-submenu-bg,
+                     $theme-xsmooth-main-nav-link-icon-dark-color,
+                     $theme-xsmooth-main-nav-link-dark-hover-bg,
+                     $theme-xsmooth-main-nav-submenu-dark-bg,
+                     $theme-xsmooth-btn-alt-primary-bg);

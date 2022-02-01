@@ -1,0 +1,55 @@
+//
+// Custom Forms
+// --------------------------------------------------
+
+// Custom control variant
+@mixin custom-control-variant($background, $background-checked) {
+    .custom-control-input {
+
+        &:checked ~ .custom-control-label::before {
+            background-color: $background-checked;
+        }
+
+        &:focus ~ .custom-control-label::before {
+            box-shadow: 0 0 0 1px #fff, 0 0 0 .2rem rgba($background-checked, .25);
+        }
+
+        &:not(:disabled):active~.custom-control-label::before {
+            background-color: lighten($background-checked, 20%);
+        }
+    }
+
+    .custom-control-label::before {
+        background-color: $background;
+    }
+
+    &.custom-checkbox {
+        .custom-control-input:checked ~ .custom-control-label::before {
+            background-color: $background-checked;
+        }
+
+        .custom-control-input:indeterminate ~ .custom-control-label::before {
+            background-color: $background-checked;
+        }
+    }
+
+    &.custom-radio {
+        .custom-control-input:checked ~ .custom-control-label::before {
+            background-color: $background-checked;
+        }
+    }
+
+    &.custom-block {
+        .custom-block-indicator {
+            background-color: $background-checked;
+        }
+
+        .custom-control-input:checked ~ .custom-control-label {
+            border-color: $background-checked;
+        }
+
+        .custom-control-input:focus ~ .custom-control-label {
+            box-shadow: 0 0 .75rem rgba($background-checked,.25);
+        }
+    }
+}

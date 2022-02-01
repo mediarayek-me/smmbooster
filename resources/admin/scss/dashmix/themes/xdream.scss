@@ -1,0 +1,42 @@
+//
+// xDream Theme
+// --------------------------------------------------
+
+// Include base files
+@import 'base';
+
+// Generate color theme
+@include color-theme($theme-xdream-primary,
+                     $theme-xdream-light,
+                     $theme-xdream-lighter,
+                     $theme-xdream-dark,
+                     $theme-xdream-darker,
+                     $theme-xdream-body-bg,
+                     $theme-xdream-body-bg-dark,
+                     $theme-xdream-body-bg-light,
+                     $theme-xdream-body-color,
+                     $theme-xdream-body-color-dark,
+                     $theme-xdream-body-color-light,
+                     $theme-xdream-link-color,
+                     $theme-xdream-link-hover-color,
+                     $theme-xdream-headings-color,
+                     $theme-xdream-input-btn-focus-color,
+                     $theme-xdream-input-btn-focus-box-shadow,
+                     $theme-xdream-input-bg,
+                     $theme-xdream-input-color,
+                     $theme-xdream-input-border-color,
+                     $theme-xdream-input-focus-bg,
+                     $theme-xdream-input-focus-color,
+                     $theme-xdream-input-focus-border-color,
+                     $theme-xdream-header-bg,
+                     $theme-xdream-header-dark-bg,
+                     $theme-xdream-sidebar-bg,
+                     $theme-xdream-sidebar-dark-bg,
+                     $theme-xdream-side-overlay-bg,
+                     $theme-xdream-main-nav-link-icon-color,
+                     $theme-xdream-main-nav-link-hover-bg,
+                     $theme-xdream-main-nav-submenu-bg,
+                     $theme-xdream-main-nav-link-icon-dark-color,
+                     $theme-xdream-main-nav-link-dark-hover-bg,
+                     $theme-xdream-main-nav-submenu-dark-bg,
+                     $theme-xdream-btn-alt-primary-bg);

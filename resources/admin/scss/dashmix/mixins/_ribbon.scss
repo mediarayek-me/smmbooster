@@ -1,0 +1,22 @@
+//
+// Ribbon
+// --------------------------------------------------
+
+@mixin ribbon-variation($bg-color, $text-color) {
+    .ribbon-box {
+        color: $text-color;
+        background-color: $bg-color;
+    }
+
+    &.ribbon-bookmark {
+        .ribbon-box::before {
+            border-color: $bg-color;
+            border-left-color: transparent;
+        }
+
+        &.ribbon-left .ribbon-box::before {
+            border-color: $bg-color;
+            border-right-color: transparent;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+//
+// Dropdown
+// --------------------------------------------------
+
+.dropdown-menu {
+    padding-right: .5rem;
+    padding-left: .5rem;
+    box-shadow: $dropdown-box-shadow;
+
+    &.dropdown-menu-lg {
+        min-width: 300px;
+    }
+}
+
+.dropdown-item {
+    margin-bottom: .25rem;
+    border-radius: $border-radius;
+}

@@ -1,0 +1,42 @@
+//
+// xWork Theme
+// --------------------------------------------------
+
+// Include base files
+@import 'base';
+
+// Generate color theme
+@include color-theme($theme-xwork-primary,
+                     $theme-xwork-light,
+                     $theme-xwork-lighter,
+                     $theme-xwork-dark,
+                     $theme-xwork-darker,
+                     $theme-xwork-body-bg,
+                     $theme-xwork-body-bg-dark,
+                     $theme-xwork-body-bg-light,
+                     $theme-xwork-body-color,
+                     $theme-xwork-body-color-dark,
+                     $theme-xwork-body-color-light,
+                     $theme-xwork-link-color,
+                     $theme-xwork-link-hover-color,
+                     $theme-xwork-headings-color,
+                     $theme-xwork-input-btn-focus-color,
+                     $theme-xwork-input-btn-focus-box-shadow,
+                     $theme-xwork-input-bg,
+                     $theme-xwork-input-color,
+                     $theme-xwork-input-border-color,
+                     $theme-xwork-input-focus-bg,
+                     $theme-xwork-input-focus-color,
+                     $theme-xwork-input-focus-border-color,
+                     $theme-xwork-header-bg,
+                     $theme-xwork-header-dark-bg,
+                     $theme-xwork-sidebar-bg,
+                     $theme-xwork-sidebar-dark-bg,
+                     $theme-xwork-side-overlay-bg,
+                     $theme-xwork-main-nav-link-icon-color,
+                     $theme-xwork-main-nav-link-hover-bg,
+                     $theme-xwork-main-nav-submenu-bg,
+                     $theme-xwork-main-nav-link-icon-dark-color,
+                     $theme-xwork-main-nav-link-dark-hover-bg,
+                     $theme-xwork-main-nav-submenu-dark-bg,
+                     $theme-xwork-btn-alt-primary-bg);

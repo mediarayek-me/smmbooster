@@ -1,0 +1,1190 @@
+//
+// Theme
+// --------------------------------------------------
+
+@mixin color-theme($brand-primary,
+                   $brand-light,
+                   $brand-lighter,
+                   $brand-dark,
+                   $brand-darker,
+                   $body-bg,
+                   $body-bg-dark,
+                   $body-bg-light,
+                   $body-color,
+                   $body-color-dark,
+                   $body-color-light,
+                   $link-color,
+                   $link-hover-color,
+                   $headings-color,
+                   $input-btn-focus-color,
+                   $input-btn-focus-box-shadow,
+                   $input-bg,
+                   $input-color,
+                   $input-border-color,
+                   $input-focus-bg,
+                   $input-focus-color,
+                   $input-focus-border-color,
+                   $header-bg,
+                   $header-dark-bg,
+                   $sidebar-bg,
+                   $sidebar-dark-bg,
+                   $side-overlay-bg,
+                   $main-nav-link-icon-color,
+                   $main-nav-link-hover-bg,
+                   $main-nav-submenu-bg,
+                   $main-nav-link-icon-dark-color,
+                   $main-nav-link-dark-hover-bg,
+                   $main-nav-submenu-dark-bg,
+                   $btn-alt-primary-bg) {
+    // Scaffolding
+    body {
+        color: $body-color;
+        background-color: $body-bg;
+    }
+
+    // Links
+    a {
+        color: $link-color;
+
+        &.link-fx::before {
+            background-color: $link-color;
+        }
+
+        @include hover() {
+            color: $link-hover-color;
+        }
+    }
+
+    // Typography
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+        color: $headings-color;
+    }
+
+    .content-heading {
+        border-bottom-color: $body-bg-dark;
+    }
+
+    hr {
+        border-top-color: $body-bg-dark;
+    }
+
+    // Contextual text colors
+    @include text-emphasis-variant('.text-primary', $brand-primary);
+    @include text-emphasis-variant('.text-primary-dark', $brand-dark);
+    @include text-emphasis-variant('.text-primary-darker', $brand-darker);
+    @include text-emphasis-variant('.text-primary-light', $brand-light);
+    @include text-emphasis-variant('.text-primary-lighter', $brand-lighter);
+
+    @include text-emphasis-variant('.text-body-bg', $body-bg);
+    @include text-emphasis-variant('.text-body-bg-light', $body-bg-light);
+    @include text-emphasis-variant('.text-body-bg-dark', $body-bg-dark);
+
+    @include text-emphasis-variant('.text-body-color', $body-color);
+    @include text-emphasis-variant('.text-body-color-dark', $body-color-dark);
+    @include text-emphasis-variant('.text-body-color-light', $body-color-light);
+
+    // Contextual dual text colors (for dark header/sidebar)
+    @include text-emphasis-variant('.text-dual', $brand-dark);
+
+    .page-header-dark #page-header,
+    .sidebar-dark #sidebar {
+        @include text-emphasis-variant('.text-dual', $body-color-light);
+    }
+
+    // Contextual background colors
+    @include bg-variant('.bg-primary', $brand-primary);
+    @include bg-variant('.bg-primary-op', rgba($brand-primary, .75));
+    @include bg-variant('.bg-primary-dark', $brand-dark);
+    @include bg-variant('.bg-primary-dark-op', rgba($brand-dark, .8));
+    @include bg-variant('.bg-primary-darker', $brand-darker);
+    @include bg-variant('.bg-primary-light', $brand-light);
+    @include bg-variant('.bg-primary-lighter', $brand-lighter);
+    @include bg-variant('.bg-body', $body-bg);
+    @include bg-variant('.bg-body-light', $body-bg-light);
+    @include bg-variant('.bg-body-dark', $body-bg-dark);
+
+    // Elements
+    @include bg-variant('.bg-header-light', $header-bg);
+    @include bg-variant('.bg-header-dark', $header-dark-bg);
+
+    @include bg-variant('.bg-sidebar-light', $sidebar-bg);
+    @include bg-variant('.bg-sidebar-dark', $sidebar-dark-bg);
+
+    // Gradients
+    @include bg-gradient-variant-linear('.bg-gd-primary', 135deg, $brand-primary, lighten($brand-primary, 15%));
+
+    // Buttons
+    .btn-link {
+        color: $link-color;
+
+        @include hover() {
+            color: $link-hover-color;
+        }
+    }
+
+    .btn-primary {
+        @include button-variant($brand-primary, $brand-primary);
+    }
+
+    .btn-outline-primary {
+        @include button-outline-variant($brand-primary);
+    }
+
+    .btn-alt-primary {
+        @include button-alt-variant($btn-alt-primary-bg, $brand-dark);
+    }
+
+    .btn-alt-secondary {
+        @include button-alt-variant($body-bg, $body-color);
+    }
+
+    .btn-hero-primary {
+        @include button-hero-variant($brand-primary);
+    }
+
+    // Hero size variant buttons
+    .btn-hero-lg {
+        @include button-size($btn-hero-padding-y-lg, $btn-hero-padding-x-lg, $font-size-sm, $btn-line-height, $btn-hero-border-radius);
+    }
+
+    .btn-hero-sm {
+        @include button-size($btn-hero-padding-y-sm, $btn-hero-padding-x-sm, $font-size-sm, $btn-line-height, $btn-hero-border-radius);
+    }
+
+    // Used for buttons that adapt to light/dark header and sidebar variations
+    .btn-dual {
+        @include button-dual-variant(darken($body-color, 22%), darken($body-bg, 10%), $body-bg-light);
+    }
+
+    .page-header-dark #page-header .btn-dual,
+    .sidebar-dark #sidebar .btn-dual {
+        @include button-dual-variant($white, darken($header-dark-bg, 6%), lighten($header-dark-bg, 4.5%));
+    }
+
+    .page-header-dark.page-header-glass:not(.page-header-scroll) #page-header .btn-dual {
+        @include button-dual-variant($white, darken($header-dark-bg, 6%));
+    }
+
+    // Alerts
+    .alert-primary {
+        @include alert-variant($brand-lighter, $brand-lighter, $brand-dark);
+    }
+
+    // Badges
+    .badge-primary {
+        @include badge-variant($brand-primary);
+    }
+
+    // Progress Bars
+    .progress-bar {
+        background-color: $brand-primary;
+    }
+
+    // Nav links
+    .nav-link {
+        color: $body-color;
+
+        @include hover-focus {
+            color: $brand-primary;
+        }
+    }
+
+    // Nav Pills
+    .nav-pills {
+        .nav-link {
+            @include hover-focus {
+                background-color: $body-bg;
+            }
+        }
+
+        .nav-link.active,
+        .show > .nav-link {
+            background-color: $brand-primary;
+        }
+    }
+
+    // Nav Tabs
+    .nav-tabs {
+        border-bottom-color: $body-bg-dark;
+
+        .nav-link {
+            @include hover-focus {
+                border-color: $body-bg-dark $body-bg-dark $body-bg-dark;
+            }
+        }
+
+        .nav-link.active,
+        .nav-item.show .nav-link {
+            border-color: $body-bg-dark $body-bg-dark $white;
+        }
+    }
+
+    // Tabs block variation
+    .nav-tabs-block {
+        background-color: $body-bg-light;
+
+        .nav-link {
+            border-color: transparent;
+
+            @include hover-focus {
+                color: $brand-primary;
+                background-color: $body-bg;
+                border-color: transparent;
+            }
+        }
+
+        .nav-link.active,
+        .nav-item.show .nav-link {
+            color: $body-color;
+            background-color: $white;
+            border-color: transparent;
+        }
+    }
+
+    // Tabs block alternative variation
+    .nav-tabs-alt {
+        border-bottom-color: $body-bg-dark;
+
+        .nav-link {
+            background-color: transparent;
+            border-color: transparent;
+
+            @include hover-focus {
+                color: $brand-primary;
+                background-color: transparent;
+                border-color: transparent;
+                box-shadow: inset 0 -3px $brand-primary;
+            }
+        }
+
+        .nav-link.active,
+        .nav-item.show .nav-link {
+            color: $body-color;
+            background-color: transparent;
+            border-color: transparent;
+            box-shadow: inset 0 -3px $brand-primary;
+        }
+    }
+
+    // Various Items Navigation
+    .nav-items {
+        a {
+            border-bottom-color: $body-bg;
+
+            @include hover() {
+                background-color: $body-bg-light;
+            }
+
+            &:active {
+                background-color: $body-bg;
+            }
+        }
+
+        > li:last-child > a {
+            border-bottom: none;
+        }
+    }
+
+    // Pagination
+    .page-item {
+        &.active .page-link {
+            background-color: $brand-primary;
+            border-color: $brand-primary;
+        }
+    }
+
+    .page-link {
+        color: $body-color;
+        background-color: $body-bg;
+        border-color: $body-bg;
+
+        &:hover {
+            color: $body-color;
+            background-color: darken($body-bg-dark, 10%);
+            border-color: darken($body-bg-dark, 10%);
+        }
+
+        &:focus {
+            background-color: $body-bg-dark;
+            border-color: $body-bg-dark;
+        }
+    }
+
+    // List Group
+    .list-group-item-action {
+        color: $body-color;
+
+        @include hover-focus {
+            color: $body-color;
+            background-color: $body-bg-light;
+        }
+
+        &:active {
+            color: $body-color;
+            background-color: $body-bg-dark;
+        }
+    }
+
+    .list-group-item {
+        border-color: $body-bg-dark;
+
+        &.active {
+            color: $white;
+            background-color: $brand-primary;
+            border-color: $brand-primary;
+        }
+    }
+
+    // Popovers
+    .popover {
+        border-color: $body-bg-dark;
+    }
+
+    .bs-popover-top {
+        .arrow::before {
+            border-top-color: fade-in($body-bg-dark, .05);
+        }
+
+        .arrow::after {
+            border-top-color: $white;
+        }
+    }
+
+    .bs-popover-right {
+        .arrow::before {
+            border-right-color: fade-in($body-bg-dark, .05);
+        }
+
+        .arrow::after {
+            border-right-color: $white;
+        }
+    }
+
+    .bs-popover-bottom {
+        .arrow::before {
+            border-bottom-color: fade-in($body-bg-dark, .05);
+        }
+
+        .arrow::after {
+            border-bottom-color: $white;
+        }
+    }
+
+    .bs-popover-left {
+        .arrow::before {
+            border-left-color: fade-in($body-bg-dark, .05);
+        }
+
+        .arrow::after {
+            border-left-color: $white;
+        }
+    }
+
+    .bs-popover-auto {
+        &[x-placement^="top"] {
+            @extend .bs-popover-top;
+        }
+        &[x-placement^="right"] {
+            @extend .bs-popover-right;
+        }
+        &[x-placement^="bottom"] {
+            @extend .bs-popover-bottom;
+        }
+        &[x-placement^="left"] {
+            @extend .bs-popover-left;
+        }
+    }
+
+    // Modals
+    .modal-header {
+        border-bottom-color: $body-bg-dark;
+    }
+
+    .modal-footer {
+        border-top-color: $body-bg-dark;
+    }
+
+    // Dropdowns
+    .dropdown-menu {
+        border-color: $body-bg-dark;
+    }
+
+    .dropdown-divider {
+        @include nav-divider($body-bg);
+    }
+
+    .dropdown-item {
+        color: $body-color;
+
+        @include hover-focus {
+            color: $body-color-dark;
+            background-color: $body-bg;
+        }
+
+        &.active,
+        &:active {
+            color: $white;
+            background-color: $brand-primary;
+        }
+    }
+
+    .dropdown-header {
+        color: $headings-color;
+    }
+
+    // Tables
+    .table {
+        th,
+        td {
+            border-top-color: $body-bg-dark;
+        }
+
+        thead th {
+            border-bottom-color: $body-bg-dark;
+        }
+
+        tbody + tbody {
+            border-top-color: $body-bg-dark;
+        }
+    }
+
+    .table-bordered {
+        &,
+        th,
+        td {
+            border-color: $body-bg-dark;
+        }
+    }
+
+    .table-striped {
+        tbody tr:nth-of-type(odd) {
+            background-color: lighten($body-bg, 1.5%);
+        }
+    }
+
+    .table-hover {
+        tbody tr {
+            @include hover() {
+                background-color: darken($body-bg, 1.5%);
+            }
+        }
+    }
+
+    @include table-row-variant("active", darken($body-bg, 1.5%));
+    @include table-row-variant("primary", $brand-lighter);
+
+    .table {
+        .thead-dark {
+            th {
+                background-color: $brand-dark;
+                border-color: $brand-dark;
+            }
+        }
+
+        .thead-light {
+            th {
+                background-color: $body-bg-dark;
+                border-color: $body-bg-dark;
+            }
+        }
+    }
+
+    // Forms
+    .form-control {
+        color: $input-color;
+        background-color: $input-bg;
+        border-color: $input-border-color;
+
+        &:focus {
+            color: $input-focus-color;
+            background-color: $input-focus-bg;
+            border-color: $input-focus-border-color;
+            box-shadow: $input-btn-focus-box-shadow;
+        }
+
+        &:disabled,
+        &[readonly] {
+            background-color: $input-disabled-bg;
+        }
+    }
+
+    select.form-control {
+        &:focus::-ms-value {
+            color: $input-color;
+            background-color: $input-bg;
+        }
+    }
+
+    .custom-control-primary {
+        @include custom-control-variant($body-bg-dark, $brand-primary);
+    }
+
+    .custom-control-input {
+        &:checked ~ .custom-control-label::before {
+            @include gradient-bg($brand-primary);
+            border-color: $brand-primary;
+        }
+
+        &:focus ~ .custom-control-label::before {
+            box-shadow: 0 0 0 1px $white, $input-btn-focus-box-shadow;
+        }
+
+        &:not(:disabled):active ~ .custom-control-label::before {
+            background-color: $brand-lighter;
+        }
+    }
+
+    .custom-select {
+        border-color: $input-border-color;
+
+        &:focus {
+            border-color: $input-focus-border-color;
+            box-shadow: inset 0 1px 2px rgba($black, .075), 0 0 0 .2rem rgba($input-focus-border-color, .5);
+
+            &::-ms-value {
+                color: $input-color;
+                background-color: $input-bg;
+            }
+        }
+    }
+
+    .custom-file-input {
+        &:focus ~ .custom-file-label {
+            border-color: $input-focus-border-color;
+            box-shadow: $input-btn-focus-box-shadow;
+
+            &::after {
+                border-color: $input-focus-border-color;
+            }
+        }
+    }
+
+    .custom-file-label {
+        color: $input-color;
+        background-color: $input-bg;
+        border-color: $input-border-color;
+
+        &::after {
+            color: $input-color;
+            @include gradient-bg($body-bg-dark);
+            border-left-color: $input-border-color;
+        }
+    }
+
+    @include form-validation-state("valid", theme-color('success'), $form-feedback-icon-valid);
+    @include form-validation-state("invalid", theme-color('danger'), $form-feedback-icon-invalid);
+
+    .form-control.form-control-alt {
+        border-color: $body-bg;
+        background-color: $body-bg;
+
+        &:focus {
+            border-color: $body-bg-dark;
+            background-color: $body-bg-dark;
+            box-shadow: none;
+        }
+
+        &.is-valid {
+            border-color: lighten(theme-color("success-light"), 15%);
+            background-color: lighten(theme-color("success-light"), 15%);
+
+            &:focus {
+                border-color: lighten(theme-color("success-light"), 10%);
+                background-color: lighten(theme-color("success-light"), 10%);
+            }
+        }
+
+        &.is-invalid {
+            border-color: lighten(theme-color("danger-light"), 23%);
+            background-color: lighten(theme-color("danger-light"), 23%);
+
+
+            &:focus {
+                border-color: lighten(theme-color("danger-light"), 20%);
+                background-color: lighten(theme-color("danger-light"), 20%);
+            }
+        }
+    }
+
+    .input-group-text {
+        color: $input-color;
+        background-color: $body-bg;
+        border-color: $input-border-color;
+    }
+
+    .input-group-text.input-group-text-alt {
+        background-color: $body-bg-dark;
+        border-color: $body-bg-dark;
+    }
+
+    // Border
+    .border { border-color: $body-bg-dark !important; }
+    .border-top { border-top-color: $body-bg-dark !important; }
+    .border-right { border-right-color: $body-bg-dark !important; }
+    .border-bottom { border-bottom-color: $body-bg-dark !important; }
+    .border-left { border-left-color: $body-bg-dark !important; }
+
+    @each $color, $value in $theme-colors {
+        .border-#{$color} {
+            border-color: $value !important;
+        }
+    }
+
+    .border-primary { border-color: $brand-primary !important; }
+    .border-white { border-color: $white !important; }
+    .border-white-op { border-color: rgba($white,.1) !important; }
+    .border-black-op { border-color: rgba($black,.1) !important; }
+
+    // Main Structure
+    #page-header { background-color: $header-bg; }
+    #sidebar { background-color: $sidebar-bg; }
+    #side-overlay { background-color: $side-overlay-bg; }
+
+    // Layout/Style variations based on #page-container classes
+    #page-container {
+        // Page header
+        &.page-header-dark #page-header {
+            color: darken($body-color-light, 8%);
+            background-color: $header-dark-bg;
+        }
+
+        &.page-header-glass {
+            #page-header {
+                background-color: transparent;
+            }
+
+            &.page-header-fixed {
+                &.page-header-scroll #page-header {
+                    background-color: rgba($header-bg, .9);
+                }
+
+                &.page-header-scroll.page-header-dark #page-header {
+                    background-color: rgba($header-dark-bg, .9);
+                }
+            }
+        }
+
+        // Sidebar and Side Overlay
+        &.sidebar-dark #sidebar {
+            color: $body-color-light;
+            background-color: $sidebar-dark-bg;
+        }
+    }
+
+    // Blocks
+    .block { box-shadow: 0 1px 3px rgba(darken($body-bg-dark, 2.5%), .5), 0 1px 2px rgba(darken($body-bg-dark, 2.5%), .5); }
+    .block-header-default { background-color: $body-bg-light; }
+
+    // Block Variations
+    .block {
+        &.block-bordered {
+            border-color: $body-bg-dark;
+        }
+
+        &.block-themed > .block-header {
+            background-color: $brand-primary;
+        }
+    }
+
+    // Block Modes
+    .block {
+        &.block-mode-loading {
+            &::after {
+                color: $brand-primary;
+            }
+        }
+    }
+
+    // Block Links
+    a.block {
+        color: $body-color;
+
+        @include hover() {
+            color: $body-color;
+        }
+
+        &.block-link-pop {
+            &:hover {
+                box-shadow: 0 .5rem 2rem darken($body-bg, 8%);
+            }
+
+            &:active {
+                box-shadow: 0 .25rem .75rem darken($body-bg, 1%);
+            }
+        }
+
+        &.block-link-shadow {
+            &:hover {
+                box-shadow: 0 0 2.25rem darken($body-bg, 8%);
+            }
+
+            &:active {
+                box-shadow: 0 0 1.125rem darken($body-bg, 4%);
+            }
+        }
+    }
+
+    // Block Effects
+    .block {
+        &.block-fx-shadow {
+            box-shadow: 0 0 2.25rem darken($body-bg, 8%);
+        }
+
+        &.block-fx-pop {
+            box-shadow: 0 .5rem 2rem darken($body-bg, 8%);
+        }
+    }
+
+    // Block Options
+    .btn-block-option {
+        color: $brand-primary;
+
+        @include hover() {
+            color: $brand-light;
+        }
+
+        @at-root {
+            a#{&}:focus,
+            .active > a#{&},
+            .show > button#{&} {
+                color: $brand-light;
+            }
+        }
+
+        &:active {
+            color: $brand-lighter;
+        }
+    }
+
+    // Page Loader
+    #page-loader {
+        background-color: $brand-primary;
+    }
+
+    // Main Navigation
+    // Headings
+    .nav-main-heading {
+        color: lighten($body-color, 25%);
+    }
+
+    // Default links
+    .nav-main-link {
+        color: lighten($body-color, 5%);
+
+        .nav-main-link-icon {
+            color: $main-nav-link-icon-color;
+        }
+
+        &:hover,
+        &.active {
+            color: $black;
+            background-color: $main-nav-link-hover-bg;
+        }
+    }
+
+    // Sub menus
+    .nav-main-submenu {
+        background-color: $main-nav-submenu-bg;
+
+        .nav-main-link {
+            color: lighten($body-color, 20%);
+
+            &:hover,
+            &.active {
+                color: darken($body-color, 7.5%);
+                background-color: transparent;
+            }
+        }
+    }
+
+    // Active sub menu
+    .nav-main-item.open {
+        > .nav-main-link-submenu {
+            color: $black;
+            background-color: $main-nav-link-hover-bg;
+        }
+    }
+
+    .nav-main-submenu .nav-main-item.open .nav-main-link {
+        background-color: transparent;
+    }
+
+    // Nav Main Horizontal
+    @include media-breakpoint-up(lg) {
+        .nav-main-horizontal {
+            // Menu variations
+            &.nav-main-hover {
+                .nav-main-item:hover {
+                    > .nav-main-link-submenu {
+                        color: $black;
+                        background-color: $main-nav-link-hover-bg;
+                    }
+                }
+            }
+        }
+    }
+
+    // Dark Sidebar Variation
+    .nav-main-dark,
+    .sidebar-dark #sidebar,
+    .page-header-dark #page-header {
+        // Headings
+        .nav-main-heading {
+            color: lighten($sidebar-dark-bg, 30%);
+        }
+        
+        // Default links
+        .nav-main-link {
+            color: lighten($sidebar-dark-bg, 55%);
+
+            > .nav-main-link-icon {
+                color: $main-nav-link-icon-dark-color;
+            }
+
+            &:hover,
+            &.active {
+                color: $white;
+                background-color: $main-nav-link-dark-hover-bg;
+            }
+        }
+
+        // Sub menus
+        .nav-main-submenu {
+            background-color: $main-nav-submenu-dark-bg;
+
+            .nav-main-link {
+                color: lighten($sidebar-dark-bg, 45%);
+
+                &:hover,
+                &.active {
+                    color: $white;
+                    background-color: transparent;
+                }
+            }
+        }
+
+        // Active sub menu
+        .nav-main-item.open {
+            > .nav-main-link-submenu {
+                color: $white;
+                background-color: $main-nav-link-dark-hover-bg;
+            }
+
+            > .nav-main-submenu {
+                background-color: $main-nav-submenu-dark-bg;
+            }
+        }
+
+        .nav-main-submenu .nav-main-item.open .nav-main-link {
+            background-color: transparent;
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        .nav-main-dark.nav-main-horizontal.nav-main-hover,
+        .sidebar-dark #sidebar .nav-main-horizontal.nav-main-hover,
+        .page-header-dark #page-header .nav-main-horizontal.nav-main-hover {
+            .nav-main-link {    
+                &:hover,
+                &.active {
+                    background-color: darken($header-dark-bg, 5%);
+                }
+            }
+
+            .nav-main-item:hover {
+                > .nav-main-link-submenu {
+                    background-color: darken($header-dark-bg, 5%);
+                }
+
+                > .nav-main-submenu {
+                    background-color: darken($header-dark-bg, 5%);
+                }
+            }
+
+            .nav-main-submenu .nav-main-item:hover .nav-main-link {
+                background-color: transparent;
+            }
+        }
+    }
+
+    // Various Items Navigation
+    .nav-items {
+        a {
+            border-bottom-color: $body-bg;
+
+            @include hover() {
+                background-color: $body-bg-light;
+            }
+        }
+    }
+
+    // Activity
+    .list-activity {
+        > li {
+            border-bottom-color: $body-bg;
+        }
+    }
+
+    // Timeline
+    .timeline-event-icon {
+        box-shadow: 0 .375rem 1.5rem darken($body-bg, 8%);
+    }
+
+    // Ribbons
+    .ribbon-light {
+        @include ribbon-variation($body-bg-dark, $body-color);
+    }
+
+    .ribbon-primary {
+        @include ribbon-variation($brand-primary, $white);
+    }
+
+    // Bootstrap Datepicker
+    .datepicker table tr td.active:hover,
+    .datepicker table tr td.active:hover:hover,
+    .datepicker table tr td.active.disabled:hover,
+    .datepicker table tr td.active.disabled:hover:hover,
+    .datepicker table tr td.active:focus,
+    .datepicker table tr td.active:hover:focus,
+    .datepicker table tr td.active.disabled:focus,
+    .datepicker table tr td.active.disabled:hover:focus,
+    .datepicker table tr td.active:active,
+    .datepicker table tr td.active:hover:active,
+    .datepicker table tr td.active.disabled:active,
+    .datepicker table tr td.active.disabled:hover:active,
+    .datepicker table tr td.active.active,
+    .datepicker table tr td.active:hover.active,
+    .datepicker table tr td.active.disabled.active,
+    .datepicker table tr td.active.disabled:hover.active,
+    .open .dropdown-toggle.datepicker table tr td.active,
+    .open .dropdown-toggle.datepicker table tr td.active:hover,
+    .open .dropdown-toggle.datepicker table tr td.active.disabled,
+    .open .dropdown-toggle.datepicker table tr td.active.disabled:hover,
+    .datepicker table tr td span.active:hover,
+    .datepicker table tr td span.active:hover:hover,
+    .datepicker table tr td span.active.disabled:hover,
+    .datepicker table tr td span.active.disabled:hover:hover,
+    .datepicker table tr td span.active:focus,
+    .datepicker table tr td span.active:hover:focus,
+    .datepicker table tr td span.active.disabled:focus,
+    .datepicker table tr td span.active.disabled:hover:focus,
+    .datepicker table tr td span.active:active,
+    .datepicker table tr td span.active:hover:active,
+    .datepicker table tr td span.active.disabled:active,
+    .datepicker table tr td span.active.disabled:hover:active,
+    .datepicker table tr td span.active.active,
+    .datepicker table tr td span.active:hover.active,
+    .datepicker table tr td span.active.disabled.active,
+    .datepicker table tr td span.active.disabled:hover.active,
+    .open .dropdown-toggle.datepicker table tr td span.active,
+    .open .dropdown-toggle.datepicker table tr td span.active:hover,
+    .open .dropdown-toggle.datepicker table tr td span.active.disabled,
+    .open .dropdown-toggle.datepicker table tr td span.active.disabled:hover {
+        background-color: $brand-primary;
+        border-color: $brand-primary;
+    }
+
+    // CKEditor
+    .cke_chrome,
+    .ck.ck-editor__main > .ck-editor__editable:not(.ck-focused),
+    .ck.ck-toolbar {
+        border-color: $body-bg-dark !important;
+    }
+
+    .cke_top,
+    .ck.ck-toolbar {
+        border-bottom-color: $body-bg-dark !important;
+        background: $body-bg-light !important;
+    }
+
+    .ck.ck-toolbar .ck.ck-toolbar__separator {
+        background: $body-bg-dark !important;
+    }
+
+    .cke_bottom {
+        border-top-color: $body-bg-dark !important;
+        background: $body-bg-light !important;
+    }
+
+    // DropzoneJS
+    .dropzone {
+        background-color: $body-bg-light;
+        border-color: $input-border-color;
+
+        .dz-message {
+            color: $body-color;
+        }
+
+        @include hover() {
+            background-color: $white;
+            border-color: $brand-primary;
+
+            .dz-message {
+                color: $brand-primary;
+            }
+        }
+    }
+
+    // FullCalendar
+    .fc-theme-bootstrap {
+        .fc-h-event {
+            background-color: $brand-primary;
+            border: $brand-primary;
+        }
+    
+        .fc-col-header-cell {
+            background-color: $body-bg-light;
+        }
+    }
+
+    // Ion Range Slider
+    .irs.irs--round {
+        .irs-min,
+        .irs-max,
+        .irs-line,
+        .irs-grid-pol {
+            background: $body-bg;
+        }
+
+        .irs-handle {
+            border-color: $brand-primary;
+        }
+
+        .irs-from:before,
+        .irs-to:before,
+        .irs-single:before {
+            border-top-color: $brand-primary;
+        }
+
+        .irs-bar,
+        .irs-from,
+        .irs-to,
+        .irs-single {
+            background: $brand-primary;
+        }
+    }
+
+    // Select2
+    .select2-container--default {
+        .select2-selection--single {
+            border-color: $input-border-color;
+        }
+
+        .select2-selection--multiple {
+            border-color: $input-border-color;
+        }
+
+        &.select2-container--focus .select2-selection--multiple,
+        &.select2-container--focus .select2-selection--single,
+        &.select2-container--open .select2-selection--multiple,
+        &.select2-container--open .select2-selection--single {
+            border-color: $input-focus-border-color;
+            box-shadow: $input-btn-focus-box-shadow;
+        }
+
+        .select2-selection--multiple {
+            .select2-selection__choice {
+                background-color: $brand-primary;
+            }
+        }
+
+        .select2-search--dropdown .select2-search__field {
+            border-color: $input-border-color;
+        }
+
+        .select2-results__option--highlighted[aria-selected] {
+            background-color: $brand-primary;
+        }
+
+        .select2-dropdown .select2-search__field:focus {
+            border-color: $input-focus-border-color;
+            box-shadow: $input-btn-focus-box-shadow;
+        }
+    }
+
+    // Simple Bar
+    .simplebar-scrollbar::before {
+        background: rgba(darken($brand-darker, 10%), .75);
+    }
+
+    // Slick
+    .slick-slider {
+        .slick-prev,
+        .slick-next {
+            &::before {
+                color: $brand-dark;
+            }
+        }
+    }
+
+    // Simple MDE
+    .editor-toolbar {
+        border-color: $body-bg-dark;
+        background-color: $body-bg-light;
+    }
+
+    .CodeMirror {
+        border-color: $body-bg-dark;
+    }
+
+    // Summernote
+    .note-editor.note-frame {
+        border-color: $body-bg-dark;
+
+        .note-toolbar {
+            background-color: $body-bg-light;
+            border-bottom-color: $body-bg-dark;
+        }
+
+        .note-statusbar {
+            border-top-color: $body-bg-dark;
+            background-color: $body-bg-light;
+        }
+    }
+
+    // Nestable2
+    .dd-handle {
+        color: $body-color;
+        background: $body-bg-light;
+        border-color: $body-bg-dark;
+
+        &:hover {
+            color: $body-color-dark;
+        }
+    }
+
+    .dd-empty,
+    .dd-placeholder {
+        border-color: $brand-darker;
+        background: $brand-lighter;
+    }
+
+    // Flatpickr
+    .flatpickr-day.selected,
+    .flatpickr-day.startRange,
+    .flatpickr-day.endRange,
+    .flatpickr-day.selected.inRange,
+    .flatpickr-day.startRange.inRange,
+    .flatpickr-day.endRange.inRange,
+    .flatpickr-day.selected:focus,
+    .flatpickr-day.startRange:focus,
+    .flatpickr-day.endRange:focus,
+    .flatpickr-day.selected:hover,
+    .flatpickr-day.startRange:hover,
+    .flatpickr-day.endRange:hover,
+    .flatpickr-day.selected.prevMonthDay,
+    .flatpickr-day.startRange.prevMonthDay,
+    .flatpickr-day.endRange.prevMonthDay,
+    .flatpickr-day.selected.nextMonthDay,
+    .flatpickr-day.startRange.nextMonthDay,
+    .flatpickr-day.endRange.nextMonthDay {
+        border-color: $brand-primary;
+        background: $brand-primary;
+    }
+
+    .flatpickr-months .flatpickr-prev-month:hover svg,
+    .flatpickr-months .flatpickr-next-month:hover svg {
+        fill: $brand-primary;
+    }
+}

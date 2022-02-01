@@ -1,0 +1,42 @@
+//
+// xinspire Theme
+// --------------------------------------------------
+
+// Include base files
+@import 'base';
+
+// Generate color theme
+@include color-theme($theme-xinspire-primary,
+                     $theme-xinspire-light,
+                     $theme-xinspire-lighter,
+                     $theme-xinspire-dark,
+                     $theme-xinspire-darker,
+                     $theme-xinspire-body-bg,
+                     $theme-xinspire-body-bg-dark,
+                     $theme-xinspire-body-bg-light,
+                     $theme-xinspire-body-color,
+                     $theme-xinspire-body-color-dark,
+                     $theme-xinspire-body-color-light,
+                     $theme-xinspire-link-color,
+                     $theme-xinspire-link-hover-color,
+                     $theme-xinspire-headings-color,
+                     $theme-xinspire-input-btn-focus-color,
+                     $theme-xinspire-input-btn-focus-box-shadow,
+                     $theme-xinspire-input-bg,
+                     $theme-xinspire-input-color,
+                     $theme-xinspire-input-border-color,
+                     $theme-xinspire-input-focus-bg,
+                     $theme-xinspire-input-focus-color,
+                     $theme-xinspire-input-focus-border-color,
+                     $theme-xinspire-header-bg,
+                     $theme-xinspire-header-dark-bg,
+                     $theme-xinspire-sidebar-bg,
+                     $theme-xinspire-sidebar-dark-bg,
+                     $theme-xinspire-side-overlay-bg,
+                     $theme-xinspire-main-nav-link-icon-color,
+                     $theme-xinspire-main-nav-link-hover-bg,
+                     $theme-xinspire-main-nav-submenu-bg,
+                     $theme-xinspire-main-nav-link-icon-dark-color,
+                     $theme-xinspire-main-nav-link-dark-hover-bg,
+                     $theme-xinspire-main-nav-submenu-dark-bg,
+                     $theme-xinspire-btn-alt-primary-bg);

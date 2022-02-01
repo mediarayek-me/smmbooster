@@ -1,0 +1,29 @@
+@media (max-width: 991px){
+    .header-area .main-nav {
+        overflow: hidden;
+        .nav{
+        background: #fff;
+        padding: 20px 10px;
+        border-radius: 15px;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        margin-top: 82px !important;
+        }
+    }
+    .nav {
+        .dropdown-menu {
+        position: relative !important;
+        width: 100%;
+        z-index: 9999;
+        text-align: center !important;
+        margin-top: 20px;
+        background-color: #fff;
+        padding: 12px 0px;
+        border-radius: 15px;
+        transform: translate3d(0px, 0px, 0px) !important;
+        }
+    }
+    .left-heading .section-title{
+        margin-top: 30px;
+    }
+}

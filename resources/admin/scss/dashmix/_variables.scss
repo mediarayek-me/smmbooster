@@ -1,0 +1,114 @@
+//
+// Dashmix variables
+// --------------------------------------------------
+
+
+// Colors
+
+$theme-colors: map-merge((
+    "primary-light":        lighten($primary, 15%),
+    "primary-lighter":      lighten($primary, 30%),
+    "primary-dark":         darken($primary, 10%),
+    "primary-darker":       darken($primary, 25%),
+    "success-light":        lighten($success, 24%),
+    "info-light":           lighten($info, 24%),
+    "warning-light":        lighten($warning, 24%),
+    "danger-light":         lighten($danger, 24%)
+), $theme-colors);
+
+$body-bg-dark:              darken($body-bg, 3.5%);
+$body-bg-light:             lighten($body-bg, 2%);
+
+$body-color-dark:           $gray-900 !default;
+$body-color-light:          $body-bg-dark !default;
+
+// Paragraphs
+
+$paragraph-line-height:     1.6;
+$paragraph-line-height-lg:  1.8;
+
+
+// Fonts
+
+$font-size-root:                    16px;
+$enable-text-optimize-legibility:   true; // you can set it to false to increase rendering performance
+
+
+// Z-index master list additions
+
+$zindex-block-pinned:       $zindex-fixed + 1 !default;
+$zindex-sidebar:            $zindex-fixed + 2 !default;
+$zindex-page-overlay:       $zindex-fixed + 3 !default;
+$zindex-side-overlay:       $zindex-fixed + 4 !default;
+$zindex-block-fullscreen:   $zindex-fixed + 5 !default;
+
+
+// Buttons
+
+$btn-hero-padding-y:        .625rem !default;
+$btn-hero-padding-x:        1.5rem !default;
+$btn-hero-border-radius:    .25rem !default;
+
+$btn-hero-padding-y-sm:     .375rem !default;
+$btn-hero-padding-x-sm:     1.25rem !default;
+
+$btn-hero-padding-y-lg:     .875rem !default;
+$btn-hero-padding-x-lg:     2.25rem !default;
+
+$btn-alt-primary-bg:        lighten(theme-color("primary-lighter"), 18%);
+
+
+// Header
+
+$header-height:             4.25rem !default;           // Best values > 3rem and < 5rem
+$header-bg:                 $white !default;
+$header-dark-bg:            theme-color("primary") !default;
+
+
+// Footer
+
+$footer-height:             4.375rem !default;           // Used as min-height for static footer and fixed height for fixed footer mode
+
+
+// Sidebar and Side Overlay
+
+$sidebar-bg:                $white !default;
+$sidebar-dark-bg:           theme-color("dark") !default;
+$sidebar-width:             250px !default;
+
+$sidebar-mini-width:        64px !default;
+
+$side-overlay-bg:           $white !default;
+$side-overlay-width:        320px !default;
+
+$side-transition:           .45s cubic-bezier(.20, .61, .42, .97) !default;
+
+
+// Main Navigation
+
+$main-nav-link-icon-color:          rgba(theme-color("primary"), .7) !default;
+$main-nav-link-hover-bg:            lighten(theme-color("primary"), 52%) !default;
+$main-nav-submenu-bg:               lighten(theme-color("primary"), 56%) !default;
+
+$main-nav-link-icon-dark-color:     lighten($sidebar-dark-bg, 20%) !default;
+$main-nav-link-dark-hover-bg:       darken($sidebar-dark-bg, 4.5%) !default;
+$main-nav-submenu-dark-bg:          darken($sidebar-dark-bg, 3%) !default;
+
+$main-nav-transition:               .3s cubic-bezier(.20, .61, .42, .97) !default;
+
+
+// Layout Spaces
+
+$space-base:                1.75rem !default;                   // Content padding
+$space-mobile:              .875rem !default;                   // Content padding in mobile
+$space-side:                1.125rem !default;                   // Content padding inside side content
+$space-row-gutter-tiny:     .25rem !default;                    // Row with tiny gutter
+$space-block:               1.25rem !default;                   // Block padding
+$space-boxed:               1200px !default;                    // Boxed content max width
+$space-narrow:              92% !default;                       // Narrow content max width
+$space-main-max-width:      1920px !default;                    // Main content max width
+
+
+// Third Party
+
+$fa-font-path:                "../fonts/fontawesome" !default;

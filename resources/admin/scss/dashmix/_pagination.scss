@@ -1,0 +1,12 @@
+//
+// Pagination
+// --------------------------------------------------
+
+.page-link {
+    font-weight: $font-weight-bold;
+
+    &:focus {
+        background-color: $body-bg-dark;
+        border-color: $body-bg-dark;
+    }
+}

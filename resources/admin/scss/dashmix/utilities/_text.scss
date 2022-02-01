@@ -1,0 +1,131 @@
+//
+// Text
+// --------------------------------------------------
+
+// Font weight
+.font-w300 { font-weight: 300 !important; }
+.font-w400 { font-weight: 400 !important; }
+.font-w500 { font-weight: 500 !important; }
+.font-w600 { font-weight: 600 !important; }
+.font-w700 { font-weight: 700 !important; }
+
+// Font sizes
+.font-size-base { font-size: $font-size-base  !important; }
+.font-size-lg { font-size: $font-size-lg !important; }
+.font-size-sm { font-size: $font-size-sm !important; }
+
+// Helpers
+.text-wrap-break-word { word-wrap: break-word; }
+
+// Letter Spacing
+.tracking-tighter { letter-spacing: -0.05em; }
+.tracking-tight { letter-spacing: -0.025em; }
+.tracking-normal { letter-spacing: 0; }
+.tracking-wide { letter-spacing: 0.025em; }
+.tracking-wider { letter-spacing: 0.05em; }
+.tracking-widest { letter-spacing: 0.1em; }
+
+// Contextual colors
+@include text-emphasis-variant('.text-primary-dark', theme-color("primary-dark"));
+@include text-emphasis-variant('.text-primary-darker',theme-color("primary-darker"));
+@include text-emphasis-variant('.text-primary-light', theme-color("primary-light"));
+@include text-emphasis-variant('.text-primary-lighter', theme-color("primary-lighter"));
+
+@include text-emphasis-variant('.text-success-light', theme-color("success-light"));
+@include text-emphasis-variant('.text-warning-light', theme-color("warning-light"));
+@include text-emphasis-variant('.text-info-light', theme-color("info-light"));
+@include text-emphasis-variant('.text-danger-light', theme-color("danger-light"));
+
+@include text-emphasis-variant('.text-body-bg', $body-bg);
+@include text-emphasis-variant('.text-body-bg-dark', $body-bg-dark);
+@include text-emphasis-variant('.text-body-bg-light', $body-bg-light);
+@include text-emphasis-variant('.text-body-color', $body-color);
+@include text-emphasis-variant('.text-body-color-dark', $body-color-dark);
+@include text-emphasis-variant('.text-body-color-light', $body-color-light);
+
+@include text-emphasis-variant('.text-muted', $text-muted);
+@include text-emphasis-variant('.text-white', $white);
+@include text-emphasis-variant('.text-white-25', rgba($white,.25));
+@include text-emphasis-variant('.text-white-50', rgba($white,.5));
+@include text-emphasis-variant('.text-white-75', rgba($white,.75));
+@include text-emphasis-variant('.text-black', $black);
+@include text-emphasis-variant('.text-black-25', rgba($black,.25));
+@include text-emphasis-variant('.text-black-50', rgba($black,.5));
+@include text-emphasis-variant('.text-black-75', rgba($black,.75));
+
+@include text-emphasis-variant('.text-gray', gray("400"));
+@include text-emphasis-variant('.text-gray-dark', gray("600"));
+@include text-emphasis-variant('.text-gray-darker', gray("800"));
+@include text-emphasis-variant('.text-gray-light', gray("200"));
+@include text-emphasis-variant('.text-gray-lighter', gray("100"));
+
+// Contextual dual text colors (for dark header/sidebar)
+@include text-emphasis-variant('.text-dual', theme-color("primary-dark"));
+
+.page-header-dark #page-header,
+.sidebar-dark #sidebar {
+    @include text-emphasis-variant('.text-dual', $body-color-light);
+}
+
+// Default Color Theme
+@include text-emphasis-variant('.text-default', theme-color("primary"));
+@include text-emphasis-variant('.text-default-dark', theme-color("primary-dark"));
+@include text-emphasis-variant('.text-default-darker', theme-color("primary-darker"));
+@include text-emphasis-variant('.text-default-light', theme-color("primary-light"));
+@include text-emphasis-variant('.text-default-lighter', theme-color("primary-lighter"));
+
+// xWork Color Theme
+@include text-emphasis-variant('.text-xwork', $theme-xwork-primary);
+@include text-emphasis-variant('.text-xwork-dark', $theme-xwork-dark);
+@include text-emphasis-variant('.text-xwork-darker', $theme-xwork-darker);
+@include text-emphasis-variant('.text-xwork-light', $theme-xwork-light);
+@include text-emphasis-variant('.text-xwork-lighter', $theme-xwork-lighter);
+
+// xModern Color Theme
+@include text-emphasis-variant('.text-xmodern', $theme-xmodern-primary);
+@include text-emphasis-variant('.text-xmodern-dark', $theme-xmodern-dark);
+@include text-emphasis-variant('.text-xmodern-darker', $theme-xmodern-darker);
+@include text-emphasis-variant('.text-xmodern-light', $theme-xmodern-light);
+@include text-emphasis-variant('.text-xmodern-lighter', $theme-xmodern-lighter);
+
+// xEco Color Theme
+@include text-emphasis-variant('.text-xeco', $theme-xeco-primary);
+@include text-emphasis-variant('.text-xeco-dark', $theme-xeco-dark);
+@include text-emphasis-variant('.text-xeco-darker', $theme-xeco-darker);
+@include text-emphasis-variant('.text-xeco-light', $theme-xeco-light);
+@include text-emphasis-variant('.text-xeco-lighter', $theme-xeco-lighter);
+
+// xSmooth Color Theme
+@include text-emphasis-variant('.text-xsmooth', $theme-xsmooth-primary);
+@include text-emphasis-variant('.text-xsmooth-dark', $theme-xsmooth-dark);
+@include text-emphasis-variant('.text-xsmooth-darker', $theme-xsmooth-darker);
+@include text-emphasis-variant('.text-xsmooth-light', $theme-xsmooth-light);
+@include text-emphasis-variant('.text-xsmooth-lighter', $theme-xsmooth-lighter);
+
+// xInspire Color Theme
+@include text-emphasis-variant('.text-xinspire', $theme-xinspire-primary);
+@include text-emphasis-variant('.text-xinspire-dark', $theme-xinspire-dark);
+@include text-emphasis-variant('.text-xinspire-darker', $theme-xinspire-darker);
+@include text-emphasis-variant('.text-xinspire-light', $theme-xinspire-light);
+@include text-emphasis-variant('.text-xinspire-lighter', $theme-xinspire-lighter);
+
+// xDream Color Theme
+@include text-emphasis-variant('.text-xdream', $theme-xdream-primary);
+@include text-emphasis-variant('.text-xdream-dark', $theme-xdream-dark);
+@include text-emphasis-variant('.text-xdream-darker', $theme-xdream-darker);
+@include text-emphasis-variant('.text-xdream-light', $theme-xdream-light);
+@include text-emphasis-variant('.text-xdream-lighter', $theme-xdream-lighter);
+
+// xPro Color Theme
+@include text-emphasis-variant('.text-xpro', $theme-xpro-primary);
+@include text-emphasis-variant('.text-xpro-dark', $theme-xpro-dark);
+@include text-emphasis-variant('.text-xpro-darker', $theme-xpro-darker);
+@include text-emphasis-variant('.text-xpro-light', $theme-xpro-light);
+@include text-emphasis-variant('.text-xpro-lighter', $theme-xpro-lighter);
+
+// xPlay Color Theme
+@include text-emphasis-variant('.text-xplay', $theme-xplay-primary);
+@include text-emphasis-variant('.text-xplay-dark', $theme-xplay-dark);
+@include text-emphasis-variant('.text-xplay-darker', $theme-xplay-darker);
+@include text-emphasis-variant('.text-xplay-light', $theme-xplay-light);
+@include text-emphasis-variant('.text-xplay-lighter', $theme-xplay-lighter);

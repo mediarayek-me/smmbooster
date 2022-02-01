@@ -1,0 +1,23 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/js/pages/service.js": "/js/pages/service.js",
+    "/js/pages/order.js": "/js/pages/order.js",
+    "/js/pages/category.js": "/js/pages/category.js",
+    "/js/pages/api_provider.js": "/js/pages/api_provider.js",
+    "/js/pages/user.js": "/js/pages/user.js",
+    "/js/pages/admin.js": "/js/pages/admin.js",
+    "/js/pages/funds.js": "/js/pages/funds.js",
+    "/js/pages/payment_method.js": "/js/pages/payment_method.js",
+    "/js/pages/transaction.js": "/js/pages/transaction.js",
+    "/js/pages/ticket.js": "/js/pages/ticket.js",
+    "/js/pages/faq.js": "/js/pages/faq.js",
+    "/js/pages/language.js": "/js/pages/language.js",
+    "/js/pages/user_notifications.js": "/js/pages/user_notifications.js",
+    "/js/pages/announcement.js": "/js/pages/announcement.js",
+    "/js/pages/dashboard.js": "/js/pages/dashboard.js",
+    "/admin/js/pages/db_analytics.min.js": "/admin/js/pages/db_analytics.min.js",
+    "/css/app.css": "/css/app.css",
+    "/css/app-rtl.css": "/css/app-rtl.css",
+    "/admin/css/main.css": "/admin/css/main.css",
+    "/css/admin-rtl.css": "/css/admin-rtl.css"
+}

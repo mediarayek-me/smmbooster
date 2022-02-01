@@ -1,0 +1,32 @@
+//
+// Borders
+// --------------------------------------------------
+
+.border-white-op { border-color: rgba($white, .1) !important; }
+.border-black-op { border-color: rgba($black, .1) !important; }
+
+.border-2x { border-width: 2px !important; }
+.border-3x { border-width: 3px !important; }
+.border-4x { border-width: 4px !important; }
+.border-5x { border-width: 5px !important; }
+.border-10x { border-width: 10px !important; }
+
+.rounded-lg {
+  border-radius: 1.5rem !important;
+}
+.rounded-lg-top {
+  border-top-left-radius: 1.5rem !important;
+  border-top-right-radius: 1.5rem !important;
+}
+.rounded-lg-right {
+  border-top-right-radius: 1.5rem !important;
+  border-bottom-right-radius: 1.5rem !important;
+}
+.rounded-lg-bottom {
+  border-bottom-right-radius: 1.5rem !important;
+  border-bottom-left-radius: 1.5rem !important;
+}
+.rounded-lg-left {
+  border-top-left-radius: 1.5rem !important;
+  border-bottom-left-radius: 1.5rem !important;
+}

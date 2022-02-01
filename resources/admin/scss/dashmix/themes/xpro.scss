@@ -1,0 +1,42 @@
+//
+// xPro Theme
+// --------------------------------------------------
+
+// Include base files
+@import 'base';
+
+// Generate color theme
+@include color-theme($theme-xpro-primary,
+                     $theme-xpro-light,
+                     $theme-xpro-lighter,
+                     $theme-xpro-dark,
+                     $theme-xpro-darker,
+                     $theme-xpro-body-bg,
+                     $theme-xpro-body-bg-dark,
+                     $theme-xpro-body-bg-light,
+                     $theme-xpro-body-color,
+                     $theme-xpro-body-color-dark,
+                     $theme-xpro-body-color-light,
+                     $theme-xpro-link-color,
+                     $theme-xpro-link-hover-color,
+                     $theme-xpro-headings-color,
+                     $theme-xpro-input-btn-focus-color,
+                     $theme-xpro-input-btn-focus-box-shadow,
+                     $theme-xpro-input-bg,
+                     $theme-xpro-input-color,
+                     $theme-xpro-input-border-color,
+                     $theme-xpro-input-focus-bg,
+                     $theme-xpro-input-focus-color,
+                     $theme-xpro-input-focus-border-color,
+                     $theme-xpro-header-bg,
+                     $theme-xpro-header-dark-bg,
+                     $theme-xpro-sidebar-bg,
+                     $theme-xpro-sidebar-dark-bg,
+                     $theme-xpro-side-overlay-bg,
+                     $theme-xpro-main-nav-link-icon-color,
+                     $theme-xpro-main-nav-link-hover-bg,
+                     $theme-xpro-main-nav-submenu-bg,
+                     $theme-xpro-main-nav-link-icon-dark-color,
+                     $theme-xpro-main-nav-link-dark-hover-bg,
+                     $theme-xpro-main-nav-submenu-dark-bg,
+                     $theme-xpro-btn-alt-primary-bg);
