@@ -1,5 +1,28 @@
 <div class="content pb-4">
 
+<sction>
+
+# Demo
+
+<div>
+ <a href="https://smmbooster.mediarayek.com" target="_blank"> GO TO DEMO VERSION</a>
+</div>
+<ul>
+     <li><strong>Admin : </strong></li>
+       <div>
+           Email : <strong>admin@admin.com</strong><br>
+           Password : <strong>admin123</strong> <br>
+           Link : <strong><a href="https://smmbooster.mediarayek.com/admin/login" target="_blank">admin dashboard</a></strong>
+       </div>
+       <li><strong>User : </strong></li>
+       <div>
+           Email : <strong>user@user.com</strong><br>
+           Password : <strong>user123</strong><br>
+           Link : <strong><a href="https://smmbooster.mediarayek.com/login" target="_blank">user dashboard</a></strong>
+       </div>
+ </ul>
+</section>
+
 <section class="my-3" id="section-intro">
 
 # Intro
@@ -315,20 +338,10 @@ To answer your customers tickets or create new one.
 
 # Version History (Changelog)
 
-version 1.0 – 06-12-2021 - Initial Release
+<pre>version 1.0 – 06-12-2021 - Initial Release</pre>
 
 </section>
 
-<section class="mt-4" id="section-thank-you">
 
-# Thank You!
-
-Thank you so much for supporting our work by choosing our item! We wish you all the best with your upcoming projects and endeavours in life! If you would like to check out more of our work, be sure to visit our website.
-
-As I said at the beginning, I'd be glad to help you if you have any questions relating to this item
-
-If you have any queries, please feel free to contact as at: `mediarayek.me@gmail.com`
-
-</section>
 
 </div>
