@@ -1,12 +1,24 @@
 <div class="content pb-4">
+    
+<section class="my-3" id="section-intro">
 
+# Intro
+
+**smmbooster** is an online social media marketing tool (web application) built using laravel, this application allows you to sell your Social Media Marketing Services or resell other SMM panel services via api providers . You can provide quality and cheap SMM Services to your customers, they can buy all packages or services like Facebook likes, Instagram followers, Twitter followers, Youtube Viewers, website traffic and many more using your panel. You can create as many services & packages according to your expertise, this is a completely dynamic panel. Whether it is something you need for your social media accounts or you are a SMM services reseller.
+<div>
+   :heart: If you like this script please give me a star ⭐ to encourage me to add more features 
+ </div>
+
+</section>
+    
 <sction>
 
 # Demo
 
 <div>
- <a href="https://smmbooster.mediarayek.com" target="_blank"> GO TO DEMO VERSION</a>
+  🔗   <a href="https://smmbooster.mediarayek.com" target="_blank"> GO TO DEMO VERSION</a>
 </div>
+    ------------------------------------
 <ul>
      <li><strong>Admin : </strong></li>
        <div>
@@ -23,12 +35,22 @@
  </ul>
 </section>
 
-<section class="my-3" id="section-intro">
-
-# Intro
-
-**smmbooster** is an online social media marketing tool (web application) built using laravel, this application that allows you to sell ayour Social Media Marketing Services or resell other SMM panel services via api providers . You can provide quality and cheap SMM Services to your customers, they can buy all packages or services like Facebook likes, Instagram followers, Twitter followers, Youtube Viewers, website traffic and many more using your the panel. You can create as many as services & packages according to your expertise, this is a completely dynamic panel. Whether it is something you need for your social media accounts or you are a SMM services reseller.
-
+    
+<section>
+  
+ # Screenshots
+  
+![This is an image](https://mediarayek.com/evento/smmbooster/images/screenshots/1.png)
+    ![This is an image](https://mediarayek.com/evento/smmbooster/images/screenshots/2.png)
+    ![This is an image](https://mediarayek.com/evento/smmbooster/images/screenshots/3.png)
+    ![This is an image](https://mediarayek.com/evento/smmbooster/images/screenshots/4.png)
+    ![This is an image](https://mediarayek.com/evento/smmbooster/images/screenshots/5.png)
+    ![This is an image](https://mediarayek.com/evento/smmbooster/images/screenshots/6.png)
+    ![This is an image](https://mediarayek.com/evento/smmbooster/images/screenshots/7.png)
+    ![This is an image](https://mediarayek.com/evento/smmbooster/images/screenshots/8.png)
+    ![This is an image](https://mediarayek.com/evento/smmbooster/images/screenshots/9.png)
+    ![This is an image](https://mediarayek.com/evento/smmbooster/images/screenshots/10.png)
+        
 </section>
 
 <section class="my-3" id="section-requirements">
@@ -179,23 +201,19 @@
 
 # How to install
 
-Step-by-step guides to set up this script on your web application. Please read the following guide carefully.
+To Install the script follow the guide below :
+    
+<div class="font-weight-bold">Step 0 - create a new database in your hosting account.</div>
 
-<div class="font-weight-bold">Step 1 - Upload and Extract a Zip Archive</div>
+<div class="font-weight-bold">Step 1 - upload all project files in your web hosting. </div>
 
-Upload the installed zip archive to your web hosting. And then extract all files
-
-<div class="font-weight-bold">Step 2 - Go to installation page</div>
-
-Open your browser and go to installation page. (In this case, this is `www.yourdomain.com`)
+<div class="font-weight-bold">Step 2 - Open your browser and go to installation page. (In this case, it is `www.yourdomain.com` ) </div>
 
 <div class="font-weight-bold">Step 3 - Fill out all the requested informations.</div>
-
-After redirecting to installation page, you have to fill the form with all the requested informations (purchase code, database name, database password ...etc)
-
+After redirecting to installation page, you have to fill all requested informations (database name, database password ...etc)
 <div class="font-weight-bold">Step 4 - Finish Installation.</div>
-
-Click Finish Button after filling all the requested informations on the step 3\. You will see successfully message after few seconds, if everything is exactly.
+Click Finish Button after filling all requested informations on the step 3\. You will see successfully message after few seconds, if everything is ok.
+ <div class="font-weight-bold">Step 5 -  enjoy 😃 .</div>
 
 </section>
 
@@ -336,9 +354,11 @@ To answer your customers tickets or create new one.
 
 <section class="mb-4" id="section-changelog">
 
-# Version History (Changelog)
+# Testing
 
-<pre>version 1.0 – 06-12-2021 - Initial Release</pre>
+For testing just run :
+    
+<pre>php .\vendor\bin\phpUnit</pre>
 
 </section>
 
