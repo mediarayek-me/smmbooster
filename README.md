@@ -202,7 +202,19 @@
 # How to install
 
 To Install the script follow the guide below :
+ 
+<div class="font-weight-bold">Step 0 - clone repository to local machine.</div>
+    <pre>git clone https://github.com/mediarayek-me/smmbooster.git</pre>
+
+<div class="font-weight-bold">Step 1 - in your project directory run.</div>
+    <pre>composer install && npm install</pre>
+    <div>  to generate vendor and node_modules directories </div> <br>
     
+  
+<div class="font-weight-bold">Step 2 - to test the script in your local machine just run.</div>
+    <pre>php artisan serve</pre>
+    <br> <br>
+  <h3>to test in your live server</h3>
 <div class="font-weight-bold">Step 0 - create a new database in your hosting account.</div>
 
 <div class="font-weight-bold">Step 1 - upload all project files in your web hosting. </div>
