@@ -35,23 +35,6 @@
  </ul>
 </section>
 
-    
-<section>
-  
- # Screenshots
-  
-![This is an image](https://mediarayek.com/evento/smmbooster/images/screenshots/1.png)
-    ![This is an image](https://mediarayek.com/evento/smmbooster/images/screenshots/2.png)
-    ![This is an image](https://mediarayek.com/evento/smmbooster/images/screenshots/3.png)
-    ![This is an image](https://mediarayek.com/evento/smmbooster/images/screenshots/4.png)
-    ![This is an image](https://mediarayek.com/evento/smmbooster/images/screenshots/5.png)
-    ![This is an image](https://mediarayek.com/evento/smmbooster/images/screenshots/6.png)
-    ![This is an image](https://mediarayek.com/evento/smmbooster/images/screenshots/7.png)
-    ![This is an image](https://mediarayek.com/evento/smmbooster/images/screenshots/8.png)
-    ![This is an image](https://mediarayek.com/evento/smmbooster/images/screenshots/9.png)
-    ![This is an image](https://mediarayek.com/evento/smmbooster/images/screenshots/10.png)
-        
-</section>
 
 <section class="my-3" id="section-requirements">
 
